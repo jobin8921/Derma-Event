@@ -30,6 +30,9 @@
               <li class="nav-item me-3">
                 <a class="nav-link text-warning fw-bold" href="">About Event</a>
               </li>
+              <li class="nav-item me-3">
+                <a class="nav-link text-warning fw-bold" href="{% url 'logout' %}">Logout</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -44,9 +47,6 @@
                     <th>#</th>
                     <th>Name</th>
                     <th>Email</th>
-                    <th>Phone</th>
-                    <th>Gender</th>
-                    <th>Designation</th>
                     <th>Registered At</th>
                 </tr>
             </thead>
@@ -56,15 +56,14 @@
                     <td>{{ forloop.counter }}</td>
                     <td>{{ attendee.full_name }}</td>
                     <td>{{ attendee.email }}</td>
-                    <td>{{ attendee.phone }}</td>
-                    <td>{{ attendee.gender }}</td>
-                    <td>{{ attendee.designation }}</td>
                     <td>{{ attendee.registered_at }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
     </div>
+
+    
 
     <!-- Bootstrap JS and Popper.js (optional, for dropdowns and modals) -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>

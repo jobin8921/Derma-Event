@@ -442,6 +442,36 @@ body {
     }
 }
 
+.register-form-section {
+    text-align: center;
+    padding: 50px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.google-register-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #444;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: box-shadow 0.3s ease;
+}
+
+.google-register-button img {
+    height: 20px;
+    margin-right: 10px;
+}
+
+.google-register-button:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+
 
 
 
