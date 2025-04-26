@@ -1,0 +1,23 @@
+<!-- templates/registration_success.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Successful</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="success-message">
+        <h2>Registration Successful!</h2>
+        <!-- <p>Thank you for registering with DermaConnect. We will be in touch with more details soon.</p> -->
+        <p><strong>Name:</strong> {{ reg_data.full_name }}</p>
+        <p><strong>Email:</strong> {{ reg_data.email }}</p>
+        <p><strong>Registered At:</strong> {{ reg_data.registered_at }}</p>
+
+        <a href="{% url 'logout' %}">Logout</a>
+    
+
+    </div>
+</body>
+</html>

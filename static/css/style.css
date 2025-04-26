@@ -1,0 +1,449 @@
+/* Reset some browser defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fefefe;
+    color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: white;
+    padding: 10px 20px;
+    border-bottom: 2px solid #d58f4a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo-section img {
+    height: 50px;
+}
+
+.logo-section h1 {
+    color: #d58f4a;
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+/* Override Bootstrap navbar link color */
+.navbar .nav-link {
+    color: #d58f4a !important; /* Apply your custom color */
+}
+
+.navbar .nav-link:hover {
+    color: #bd7535 !important; /* Hover effect with a darker shade */
+}
+
+/* Optional: Override the Register button color */
+.navbar .btn-warning {
+    background-color: #d58f4a !important;
+    border-color: #d58f4a !important;
+}
+
+.navbar .btn-warning:hover {
+    background-color: #bd7535 !important;
+    border-color: #bd7535 !important;
+}
+
+
+.register-btn {
+    padding: 6px 12px;
+    background-color: #d58f4a;
+    color: white !important;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background: url('{% static "images/hero_bg.jpg" %}') no-repeat center center/cover;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.hero-content {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+.hero-content h2 {
+    font-size: 32px;
+    color: #d58f4a;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.hero-register-btn {
+    text-decoration: none;
+    background-color: #d58f4a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hero-register-btn:hover {
+    background-color: #bd7535;
+}
+/* Register Form Section */
+.register-form-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+.register-form-section select#gender {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%227%22%20viewBox%3D%220%200%2010%207%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M1%201L5%205L9%201%22%20stroke%3D%22%23333%22%20stroke-width%3D%222%22/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+}
+
+.register-form-section select#gender:focus {
+    border-color: #d58f4a;
+    outline: none;
+}
+
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid #ddd;
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #d58f4a;
+    margin-bottom: 25px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #444;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.form-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #d58f4a;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.form-btn:hover {
+    background-color: #bd7535;
+}
+
+/* responsive */
+/* New Hamburger Styles */
+
+/* Navigation Defaults */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+/* Responsive Hamburger Menu */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        border-top: 1px solid #ddd;
+        padding: 10px 20px;
+    }
+
+    .nav-links a {
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+        color: #d58f4a;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
+
+
+
+/* succes message css */
+
+/* Add this in your static/css/style.css */
+
+.success-message {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #d58f4a;
+    color: white;
+    border-radius: 8px;
+    max-width: 600px;
+}
+
+.success-message h2 {
+    font-size: 28px;
+}
+
+.success-message p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.success-message .back-btn {
+    text-decoration: none;
+    background-color: #fff;
+    color: #d58f4a;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.success-message .back-btn:hover {
+    background-color: #f2f2f2;
+}
+
+/* Another Section Styles  home page */
+.another-section {
+    background: linear-gradient(to right, #fff5ee, #fff);
+    padding: 80px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+.another-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.another-heading {
+    font-size: 38px;
+    color: #d58f4a;
+    margin-bottom: 10px;
+}
+
+.another-tagline {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.another-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.another-highlights h3 {
+    font-size: 20px;
+    color: #d58f4a;
+    margin-bottom: 10px;
+}
+
+.another-highlights ul {
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.another-highlights ul li {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.another-cta {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.another-register-btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background-color: #d58f4a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.another-register-btn:hover {
+    background-color: #b06a29;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .another-wrapper {
+        padding: 25px;
+    }
+
+    .another-heading {
+        font-size: 30px;
+    }
+
+    .another-tagline,
+    .another-description,
+    .another-highlights ul li {
+        font-size: 14px;
+    }
+
+    .another-register-btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
+
+/* Another Section Styles  about page */
+
+.agenda-section {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+.agenda-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.agenda-title {
+    font-size: 32px;
+    color: #d58f4a;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.agenda-day {
+    margin-bottom: 50px;
+}
+
+.agenda-day h3 {
+    font-size: 24px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.agenda-table {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.agenda-row {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 2fr;
+    gap: 20px;
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    align-items: center;
+}
+
+.agenda-row.header {
+    background-color: #d58f4a;
+    color: white;
+    font-weight: bold;
+    box-shadow: none;
+}
+
+.agenda-row.header div {
+    font-size: 14px;
+}
+
+.agenda-row div {
+    font-size: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .agenda-row {
+        grid-template-columns: 1fr;
+        text-align: left;
+        gap: 8px;
+    }
+
+    .agenda-row.header {
+        display: none;
+    }
+
+    .agenda-row div::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 4px;
+        color: #888;
+    }
+}
+
+
+
+
+
+

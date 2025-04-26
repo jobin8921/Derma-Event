@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - DermaConnect</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body style="background-color: #f4f7fc;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom" style="padding: 10px 20px;">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="{% url 'admin_panel' %}">
+            <img src="{% static 'images/logo_derma.webp' %}" alt="DermaConnect Logo" style="height: 50px;">
+            <h1 class="ms-2 mb-0" style="color: #d58f4a; font-size: 24px;">DERMMA CONNECT</h1>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item me-3">
+                <a class="nav-link text-warning fw-bold" href="{% url 'home' %}">Home Page</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card shadow-lg" style="width: 100%; max-width: 400px;">
+            <div class="card-body">
+                <h2 class="card-title text-center mb-4 text-dark">Derma Connect Conclave Admin Panel</h2>
+
+                {% if error %}
+                <div class="alert alert-danger">
+                    <p>{{ error }}</p>
+                </div>
+                {% endif %}
+
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="password">Enter Password:</label>
+                        <input type="password" class="form-control" name="password" required id="password">
+                    </div>
+                    <!-- Custom Button Style (No blue color) -->
+                    <button type="submit" class="btn btn-secondary btn-block">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

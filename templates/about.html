@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DermaConnect Conclave Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<!-- HEADER -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom" style="padding: 10px 20px;">
+      <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="{% url 'admin_panel' %}">
+                  <img src="{% static 'images/logo_derma.webp' %}" alt="DermaConnect Logo" style="height: 50px;">
+                  <h1 class="ms-2 mb-0" style="color: #d58f4a; font-size: 24px;">DERMMA CONNECT</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item me-3">
+                        <a class="nav-link text-warning fw-bold" href="{% url 'home' %}">Welcome</a>
+                    </li>
+                    <li class="nav-item me-3">
+                      <a class="nav-link text-warning fw-bold" href="">About Event</a>
+            
+                    <li class="nav-item me-3">
+                      <a class="btn btn-warning text-white fw-bold" href="{% url 'register' %}">Register</a>
+                    </li>
+            
+                  </ul>
+                </div>
+              </div>
+        </nav>
+
+
+        <section id="event-agenda" class="agenda-section">
+            <div class="container">
+              <h2>Dermmaconnect Conclave 2025 Proposed Event Agenda</h2>
+          
+              <!-- Day 1 -->
+              <div class="agenda-day">
+                <h3>Day 1</h3>
+                <div class="agenda-table">
+                  <div class="agenda-row header">
+                    <div>Time</div>
+                    <div>Session</div>
+                    <div>Topic / Activity</div>
+                  </div>
+                  <div class="agenda-row">
+                    <div>10:00 AM – 11:00 AM</div>
+                    <div>Inauguration Ceremony</div>
+                    <div>Address by Hon. Health Minister Veena George</div>
+                  </div>
+                  <div class="agenda-row">
+                    <div>11:30 AM – 12:30 PM</div>
+                    <div>Session 1</div>
+                    <div>Understanding Skin Health: The Science Behind Natural Skin</div>
+                  </div>
+                  <div class="agenda-row">
+                    <div>12:30 PM – 1:30 PM</div>
+                    <div>Session 2</div>
+                    <div>Embracing Your Natural Skin: Myths and Facts</div>
+                  </div>
+                  <div class="agenda-row">
+                    <div>1:00 PM – 2:00 PM</div>
+                    <div>Lunch Break</div>
+                    <div>Networking & Exhibition</div>
+                  </div>
+                  <div class="agenda-row">
+                    <div>-</div>
+                    <div>Session 3 (Free Skin Clinic)</div>
+                    <div>Open Dermatology Clinic</div>
+                  </div>
+                  <div class="agenda-row">
+                    <div>3:00 PM – 5:00 PM</div>
+                    <div>Evening Session</div>
+                    <div>Celebrity Talk: “Natural Skin, Real Confidence”</div>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Day 2 -->
+              <div class="agenda-day">
+                <h3>Day 2</h3>
+                <div class="agenda-table">
+                  <div class="agenda-row header">
+                    <div>Time</div>
+                    <div>Session</div>
+                    <div>Topic / Activity</div>
+                  </div>
+                  <div class="agenda-row">
+                    <div>10:00 AM – 11:00 AM</div>
+                    <div>Session 4</div>
+                    <div>Advances in Dermatology: From Treatment to Aesthetic Solutions</div>
+                  </div>
+                  <div class="agenda-row">
+                    <div>11:30 AM – 12:30 PM</div>
+                    <div>Session 5</div>
+                    <div>Preventive Care: How to Protect Your Skin Naturally</div>
+                  </div>
+                  <div class="agenda-row">
+                    <div>12:30 PM – 1:30 PM</div>
+                    <div>Lunch Break</div>
+                    <div>Networking & Exhibition</div>
+                  </div>
+                  <div class="agenda-row">
+                    <div>1:30 PM – 3:00 PM</div>
+                    <div>Session 6</div>
+                    <div>Addressing Skin Conditions: Practical Solutions from Experts</div>
+                  </div>
+                  <div class="agenda-row">
+                    <div>-</div>
+                    <div>Closing Session</div>
+                    <div>Concluding Address by Hon. Minister [TBD]</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+  
+  
+
+  
+    
+  
+  
+
+  
+         
+
+</body>
+
+
+</html>

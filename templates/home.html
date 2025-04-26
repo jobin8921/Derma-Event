@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DermaConnect Conclave Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<!-- HEADER -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom" style="padding: 10px 20px;">
+      <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="{% url 'admin_panel' %}">
+                  <img src="{% static 'images/logo_derma.webp' %}" alt="DermaConnect Logo" style="height: 50px;">
+                  <h1 class="ms-2 mb-0" style="color: #d58f4a; font-size: 24px;">DERMMA CONNECT</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item me-3">
+                      <a class="nav-link text-warning fw-bold" href="{% url 'home' %}">Welcome</a>
+                  </li>
+                    <li class="nav-item me-3">
+                      <a class="nav-link text-warning fw-bold" href="{% url 'about' %}">About Event</a>
+                    </li>
+      
+                    <li class="nav-item me-3">
+                      <a class="btn btn-warning text-white fw-bold" href="{% url 'register' %}">Register</a>
+                    </li>
+            
+                  </ul>
+                </div>
+              </div>
+        </nav>
+
+
+  
+  
+
+    <!-- HERO SECTION -->
+    <section style="font-family: Arial, sans-serif; background-color: #f4f9f9; padding: 60px 20px;">
+      <div style="max-width: 1200px; margin: auto;">
+        <!-- Title -->
+        <h2 style="text-align: center; font-size: 2.8em; color: #4a4a8a; margin-bottom: 10px;">Skin Health Conclave 2025</h2>
+        <p style="text-align: center; color: #666; font-size: 1.2em; margin-bottom: 40px;">
+          Join us for an inspiring two-day journey dedicated to promoting skin health, spreading awareness, and embracing wellness. 
+          The Skin Health Conclave 2025 brings together leading dermatologists, skincare brands, celebrities, and health enthusiasts 
+          under one roof to celebrate the essence of healthy skin and holistic living.
+        </p>
+    
+        <!-- Timing and Highlights Cards -->
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+          
+          <!-- Timing Card -->
+          <div style="flex: 1; min-width: 280px; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-top: 4px solid #ff8c00;">
+            <h3 style="color: #2c3e50; margin-bottom: 15px;">Conclave Timings</h3>
+            <ul style="color: #555; font-size: 1.05em; line-height: 1.8; padding-left: 20px;">
+              <li><strong>Dates:</strong> May 18 - 19, 2025</li>
+              <li><strong>Time:</strong> 10:00 AM to 6:00 PM (Both Days)</li>
+              <li><strong>Venue:</strong> The Park Centre, Technopark, Trivandrum</li>
+              <li><strong>Entry:</strong> Open to Public | Free Registration</li>
+            </ul>
+            <p style="margin-top: 15px; color: #777;">
+              Experience an enriching weekend full of knowledge-sharing, networking, and rejuvenation.
+            </p>
+          </div>
+    
+          <!-- Highlights Card -->
+          <div style="flex: 2; min-width: 280px; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-top: 4px solid #6a5acd;">
+            <h3 style="color: #2c3e50; margin-bottom: 15px;">Key Highlights of the Conclave</h3>
+            <ul style="color: #555; font-size: 1.05em; line-height: 1.8; padding-left: 20px;">
+              <li><strong>Celebrity Participation:</strong> Engage with top influencers from the film and fashion industries promoting skin health awareness.</li>
+              <li><strong>Free Dermatology Clinics:</strong> Get personalized skin consultations, expert skin analysis, and customized care advice by leading dermatologists.</li>
+              <li><strong>Workshops & Live Demonstrations:</strong> Attend interactive sessions covering skincare routines, new treatments, and cosmetic dermatology advancements.</li>
+              <li><strong>Natural Skincare Exhibits:</strong> Explore organic and dermatologist-tested products presented by trusted skincare brands.</li>
+              <li><strong>Networking Opportunities:</strong> Connect with healthcare professionals, beauty experts, and fellow attendees passionate about skincare and wellness.</li>
+            </ul>
+            <p style="margin-top: 15px; color: #777;">
+              An unforgettable event where education meets inspiration — ideal for all age groups and skin types.
+            </p>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+
+  
+  
+
+  
+         
+
+</body>
+
+
+</html>
