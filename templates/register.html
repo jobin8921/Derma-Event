@@ -44,8 +44,11 @@
 
 <!-- REGISTRATION FORM -->
 <section class="register-form-section">
-        <h1>Welcome to Event Registration</h1>
-        <a href="{% url 'social:begin' 'google-oauth2' %}?next=/registration_success/">Register with Google</a>
+  <h1>Welcome to Event Registration</h1>
+  <a class="google-register-button" href="{% url 'social:begin' 'google-oauth2' %}?next=/registration_success/">
+      <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo" />
+      Register with Google
+  </a>
 </section>
 
 </body>
