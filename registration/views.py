@@ -9,7 +9,7 @@ ADMIN_PASSWORD = "derma2025"  # Change this to something secure
 
 
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'index.html')
 
 def about(request):
     return render(request, 'about.html')
