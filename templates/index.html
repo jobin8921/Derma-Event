@@ -37,14 +37,14 @@
         <div class="container">
             <div class="logo">
                 <a href="./index.html">
-                    <img src="img/logo_derma.webp"alt="">
+                    <img src="{% static 'img/logo_derma.webp' %}"alt="">
                 </a>
             </div>
             <div class="nav-menu">
                 <nav class="mainmenu mobile-menu">
                     <ul>
                         <li class="active"><a href="./index.html">Home</a></li>
-                        <li class="active"><a href="./about.html">About</a></li>
+                        <li class="active"><a href="{% url 'about' %}">About</a></li>
                         <li class="active"><a href="./contact.html">Contact</a></li>
                     </ul>
                 </nav>
@@ -58,7 +58,7 @@
     <!-- Hero Section Begin -->
     <section class="hero-section" style="position: relative; overflow: hidden;">
         <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
-            <source src="video/derma_bg.mp4" type="video/mp4">
+            <source src="{% static 'video/derma_bg.mp4'%}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="container">
@@ -152,7 +152,7 @@
                 </div>
             </div>
         </div>
-        <div class="member-item set-bg" data-setbg="img/speakers/ceo_img.jpg">
+        <div class="member-item set-bg" data-setbg="{% static 'img/speakers/ceo_img.jpg' %}">
             <div class="mi-text">
                 <h5>Abhijith TJ</h5>
                 <span>CEO</span>
@@ -255,7 +255,7 @@
                                         <div class="row">
                                             <div class="col-lg-3">
                                                 <div class="sc-pic">
-                                                    <img src="img/day/Veena-George.webp" alt="">
+                                                    <img src="{% static 'img/day/Veena-George.webp' %}" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-lg-5">
