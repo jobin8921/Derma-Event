@@ -14,8 +14,6 @@ def home(request):
 def about(request):
     return render(request, 'about.html')
 
-def register(request):
-    return render(request, 'register.html')
 
 
 def registration_success(request):
