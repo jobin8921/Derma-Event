@@ -14,7 +14,7 @@
     <title>Charmam : Dermmaconnect Event</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favico">
+    <link rel="icon" href="img/core-img/favicon.png">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="{% static 'style.css' %}">
@@ -75,7 +75,7 @@
     <section class="welcome-area">
         <div class="welcome-slides owl-carousel">
             <!-- Single Slide -->
-            <div class="single-welcome-slide bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/1.jpg);">
+            <div class="single-welcome-slide bg-img bg-overlay jarallax" style="background-image: url('{% static 'img/bg-img/1.jpg' %}');">
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <!-- Welcome Text -->
@@ -138,7 +138,7 @@
                 <!-- About Thumb -->
                 <div class="col-12 col-md-6">
                     <div class="about-thumb mb-80 wow fadeInUp" data-wow-delay="300ms">
-                        <img src="img/png-images/dermmaeventpng.png" alt="" style="width: 700px; height: 600px;">
+                        <img src="{% static 'img/png-images/dermmaeventpng.png' %}" alt="" style="width: 700px; height: 600px;">
                     </div>
                 </div>
             </div>
