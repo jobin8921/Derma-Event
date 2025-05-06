@@ -1,515 +1,1158 @@
 {% load static %}
-
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
+
+<!-- Mirrored from preview.colorlib.com/theme/confer/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 May 2025 17:38:38 GMT -->
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Manup Template">
-    <meta name="keywords" content="Manup, unica, creative, html">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dermaconnect | Charmam 2025</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700,800,900&display=swap"rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+    <!-- Title -->
+    <title>Charmam : Dermmaconnect Event</title>
 
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favico">
 
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/elegant-icons.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
 </head>
 
 <body>
-    <!-- Page Preloder -->
-    <!-- <div id="preloder">
+    <!-- Preloader -->
+    <!-- <div id="preloader">
         <div class="loader"></div>
     </div> -->
+    <!-- /Preloader -->
 
-    <!-- Header Section Begin -->
-    <header class="header-section">
-        <div class="container">
-            <div class="logo">
-                <a href="./index.html">
-                    <img src="{% static 'img/logo_derma.webp' %}"alt="">
-                </a>
-            </div>
-            <div class="nav-menu">
-                <nav class="mainmenu mobile-menu">
-                    <ul>
-                        <li class="active"><a href="./index.html">Home</a></li>
-                        <li class="active"><a href="{% url 'about' %}">About</a></li>
-                        <li class="active"><a href="./contact.html">Contact</a></li>
-                    </ul>
+    <!-- Header Area Start -->
+    <header class="header-area">
+        <div class="classy-nav-container breakpoint-off">
+            <div class="container">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar justify-content-between" id="conferNav">
+
+                    <!-- Logo -->
+                    <a class="nav-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
+
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="classy-menu">
+                        <!-- Menu Close Button -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul id="nav">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="schedule.html">Schedule</a></li>
+                                <li><a href="speakers.html">Speakears</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+
+                            <!-- Get Tickets Button -->
+                            <a href="#" class="btn confer-btn mt-3 mt-lg-0 ml-3 ml-lg-5">Get Tickets <i class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                        <!-- Nav End -->
+                    </div>
                 </nav>
-                <a href="register.html" class="primary-btn top-btn"><i class="fa fa-ticket"></i> Register</a>
             </div>
-            <div id="mobile-menu-wrap"></div>
         </div>
     </header>
-    <!-- Header End -->
+    <!-- Header Area End -->
 
-    <!-- Hero Section Begin -->
-    <section class="hero-section" style="position: relative; overflow: hidden;">
-        <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
-            <source src="{% static 'video/derma_bg.mp4'%}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7">
-                    <div class="hero-text">
-                        <!-- <span>18 to 19 May 2019, Technopark, Trivandram</span>
-                        <h2>Change Your Mind<br /> To Become Success</h2> -->
-                        <!-- <a href="#" class="primary-btn">Buy Ticket</a> -->
+    <!-- Welcome Area Start -->
+    <section class="welcome-area">
+        <div class="welcome-slides owl-carousel">
+            <!-- Single Slide -->
+            <div class="single-welcome-slide bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/1.jpg);">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <!-- Welcome Text -->
+                        <div class="col-12">
+                            <div class="welcome-text text-right">
+                                <h2 data-animation="fadeInUp" data-delay="300ms">Science <br>Conference</h2>
+                                <h6 data-animation="fadeInUp" data-delay="500ms">Shangri-La Hotel, Bangkok, Bangkok, Thailand</h6>
+                                <div class="hero-btn-group" data-animation="fadeInUp" data-delay="700ms">
+                                    <a href="#" class="btn confer-btn">More Information <i class="zmdi zmdi-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-5">
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- Hero Section End -->
 
-    <!-- Counter Section Begin -->
-    <section class="counter-section bg-gradient">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="counter-text">
-                        <span>Conference Date</span>
-                        <h3>Count Every Second <br />Until the Event</h3>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="cd-timer" id="countdown">
-                        <div class="cd-item">
-                            <span>22</span>
-                            <p>Days</p>
-                        </div>
-                        <div class="cd-item">
-                            <span>528</span>
-                            <p>Hours</p>
-                        </div>
-                        <div class="cd-item">
-                            <span>31680</span>
-                            <p>Minutes</p>
-                        </div>
-                        <div class="cd-item">
-                            <span>1900800</span>
-                            <p>Seconds</p>
+            <!-- Single Slide -->
+            <div class="single-welcome-slide bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/45.jpg);">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <!-- Welcome Text -->
+                        <div class="col-12">
+                            <div class="welcome-text-two text-center">
+                                <h5 data-animation="fadeInUp" data-delay="100ms">The event consistently</h5>
+                                <h2 data-animation="fadeInUp" data-delay="300ms">OSHA Compliance</h2>
+                                <!-- Event Meta -->
+                                <div class="event-meta" data-animation="fadeInUp" data-delay="500ms">
+                                    <a class="event-date" href="#"><i class="zmdi zmdi-account"></i> January 14, 2019</a>
+                                    <a class="event-author" href="#"><i class="zmdi zmdi-alarm-check"></i> Laura Green</a>
+                                </div>
+                                <div class="hero-btn-group" data-animation="fadeInUp" data-delay="700ms">
+                                    <a href="#" class="btn confer-btn m-2">View more <i class="zmdi zmdi-long-arrow-right"></i></a>
+                                    <a href="#" class="btn confer-btn m-2">Get Tickets <i class="zmdi zmdi-long-arrow-right"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Scroll Icon -->
+        <div class="icon-scroll" id="scrollDown"></div>
     </section>
-    <!-- Counter Section End -->
+    <!-- Welcome Area End -->
 
-    <!-- Home About Section Begin -->
-    <section class="home-about-section spad">
+    <!-- About Us And Countdown Area Start -->
+    <section class="about-us-countdown-area section-padding-100-0" id="about">
         <div class="container">
-          <div style="display: flex; flex-wrap: wrap; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-top: 4px solid #6a5acd;">
-            <div style="flex: 1; min-width: 280px; padding: 10px;">
-              <img src="img/h-about.jpg" alt="Conclave Image" style="width: 100%; height: auto; border-radius: 10px;">
-            </div>
-            <div style="flex: 2; min-width: 280px; padding: 10px;">
-              <h3 style="color: #2c3e50; margin-top: 0; margin-bottom: 15px;">Highlights of the Conclave</h3>
-              <ul style="color: #555; font-size: 1.05em; line-height: 1.8; padding-left: 20px;">
-                <li><strong>Celebrity Participation:</strong> Engage with top influencers from the film and fashion industries promoting skin health awareness.</li>
-                <li><strong>Free Dermatology Clinics:</strong> Get personalized skin consultations, expert skin analysis, and customized care advice by leading dermatologists.</li>
-                <li><strong>Workshops & Live Demonstrations:</strong> Attend interactive sessions covering skincare routines, new treatments, and cosmetic dermatology advancements.</li>
-                <li><strong>Natural Skincare Exhibits:</strong> Explore organic and dermatologist-tested products presented by trusted skincare brands.</li>
-                <li><strong>Networking Opportunities:</strong> Connect with healthcare professionals, beauty experts, and fellow attendees passionate about skincare and wellness.</li>
-                <li><strong>Natural Skincare Exhibits:</strong> Explore organic and dermatologist-tested products presented by trusted skincare brands.</li>
-                <li><strong>Networking Opportunities:</strong> Connect with healthcare professionals, beauty experts, and fellow attendees passionate about skincare and wellness.</li>
-              </ul>
-             
-            </div>
-          </div>
-        </div>
-    </section>
-      
-
-    <!-- Home About Section End -->
-
-    <!-- Team Member Section Begin -->
-    <section class="team-member-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <h2>Who’s speaking</h2>
-                        <p>These are our communicators, you can see each person information</p>
+            <div class="row align-items-center">
+                <!-- About Content -->
+                <div class="col-12 col-md-6">
+                    <div class="about-content-text mb-80">
+                        <h6 class="wow fadeInUp" data-wow-delay="300ms">About Conference</h6>
+                        <h3 class="wow fadeInUp" data-wow-delay="300ms">Welcome to the Project Management</h3>
+                        <p class="wow fadeInUp" data-wow-delay="300ms">The Project Management is a platform to learn expert techniques for building successful project teams, creating efficient plans and implementing effective tracking measures to ensure your projects come in on deadline and on budget. In one fast-paced, well-designed day, we’ll cover all the essential elements of project management.</p>
+                        <a href="#" class="btn confer-btn mt-50 wow fadeInUp" data-wow-delay="300ms">Interested <i class="zmdi zmdi-long-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- About Thumb -->
+                <div class="col-12 col-md-6">
+                    <div class="about-thumb mb-80 wow fadeInUp" data-wow-delay="300ms">
+                        <img src="img/png-images/dermmaeventpng.png" alt="" style="width: 700px; height: 600px;">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="member-item set-bg" data-setbg="{% static 'img/speakers/ceo_img.jpg' %}">
-            <div class="mi-text">
-                <h5>Abhijith TJ</h5>
-                <span>CEO</span>
-            </div>
-        </div>
-       
-       
-        <div class="member-item set-bg" data-setbg="img/team-member/member-6.jpg">
-            <div class="mi-social">
-                <div class="mi-social-inner bg-gradient">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="mi-text">
-                <h5>Emma Sandoval</h5>
-                <span>Speaker</span>
-            </div>
-        </div>
-        <div class="member-item set-bg" data-setbg="img/team-member/member-7.jpg">
-            <div class="mi-social">
-                <div class="mi-social-inner bg-gradient">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="mi-text">
-                <h5>Emma Sandoval</h5>
-                <span>Speaker</span>
-            </div>
-        </div>
-        <div class="member-item set-bg" data-setbg="img/team-member/member-8.jpg">
-            <div class="mi-social">
-                <div class="mi-social-inner bg-gradient">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="mi-text">
-                <h5>Emma Sandoval</h5>
-                <span>Speaker</span>
-            </div>
-        </div>
-        <div class="member-item set-bg" data-setbg="img/team-member/member-9.jpg">
-            <div class="mi-social">
-                <div class="mi-social-inner bg-gradient">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="mi-text">
-                <h5>Emma Sandoval</h5>
-                <span>Speaker</span>
-            </div>
-        </div>
-       
-    </section>
-    <!-- Team Member Section End -->
 
-    <!-- Schedule Section Begin -->
-    <section class="schedule-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <h2>Our Schedule</h2>
-                        <p>Do not miss anything topic about the event</p>
+        <!-- Counter Up Area -->
+        <div class="countdown-up-area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-3">
+                        <!-- Countdown Text -->
+                        <div class="countdown-content-text mb-100 wow fadeInUp" data-wow-delay="300ms">
+                            <h6>Conference Date</h6>
+                            <h4>Count Every Second Until the Event</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-9">
+                        <div class="countdown-timer mb-100 wow fadeInUp" data-wow-delay="300ms">
+                            <div id="clock"></div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <!-- About Us And Countdown Area End -->
+
+    <!-- Our Speakings Area Start -->
+    <section class="our-speaker-area bg-img bg-gradient-overlay section-padding-100-60" style="background-image: url(img/bg-img/3.jpg);">
+        <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <!-- Heading -->
+                <div class="col-12">
+                    <div class="section-heading text-center wow fadeInUp" data-wow-delay="300ms">
+                        <p>Our Speakings</p>
+                        <h4>Who’s speaking</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Single Speaker Area -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp" data-wow-delay="300ms">
+                        <!-- Thumb -->
+                        <div class="speaker-single-thumb">
+                            <img src="img/bg-img/4.jpg" alt="">
+                        </div>
+                        <!-- Social Info -->
+                        <div class="social-info">
+                            <a href="#"><i class="zmdi zmdi-facebook"></i></a>
+                            <a href="#"><i class="zmdi zmdi-instagram"></i></a>
+                            <a href="#"><i class="zmdi zmdi-twitter"></i></a>
+                            <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
+                        </div>
+                        <!-- Info -->
+                        <div class="speaker-info">
+                            <h5>Albert Barnes</h5>
+                            <p>Founder</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Speaker Area -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp" data-wow-delay="300ms">
+                        <!-- Thumb -->
+                        <div class="speaker-single-thumb">
+                            <img src="img/bg-img/5.jpg" alt="">
+                        </div>
+                        <!-- Social Info -->
+                        <div class="social-info">
+                            <a href="#"><i class="zmdi zmdi-facebook"></i></a>
+                            <a href="#"><i class="zmdi zmdi-instagram"></i></a>
+                            <a href="#"><i class="zmdi zmdi-twitter"></i></a>
+                            <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
+                        </div>
+                        <!-- Info -->
+                        <div class="speaker-info">
+                            <h5>Patricia Stanley</h5>
+                            <p>Product Lead</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Speaker Area -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp" data-wow-delay="300ms">
+                        <!-- Thumb -->
+                        <div class="speaker-single-thumb">
+                            <img src="img/bg-img/6.jpg" alt="">
+                        </div>
+                        <!-- Social Info -->
+                        <div class="social-info">
+                            <a href="#"><i class="zmdi zmdi-facebook"></i></a>
+                            <a href="#"><i class="zmdi zmdi-instagram"></i></a>
+                            <a href="#"><i class="zmdi zmdi-twitter"></i></a>
+                            <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
+                        </div>
+                        <!-- Info -->
+                        <div class="speaker-info">
+                            <h5>Evelyn Stone</h5>
+                            <p>Photographer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Speaker Area -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp" data-wow-delay="300ms">
+                        <!-- Thumb -->
+                        <div class="speaker-single-thumb">
+                            <img src="img/bg-img/7.jpg" alt="">
+                        </div>
+                        <!-- Social Info -->
+                        <div class="social-info">
+                            <a href="#"><i class="zmdi zmdi-facebook"></i></a>
+                            <a href="#"><i class="zmdi zmdi-instagram"></i></a>
+                            <a href="#"><i class="zmdi zmdi-twitter"></i></a>
+                            <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
+                        </div>
+                        <!-- Info -->
+                        <div class="speaker-info">
+                            <h5>Evelyn Stone</h5>
+                            <p>Photographer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Speaker Area -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp" data-wow-delay="300ms">
+                        <!-- Thumb -->
+                        <div class="speaker-single-thumb">
+                            <img src="img/bg-img/8.jpg" alt="">
+                        </div>
+                        <!-- Social Info -->
+                        <div class="social-info">
+                            <a href="#"><i class="zmdi zmdi-facebook"></i></a>
+                            <a href="#"><i class="zmdi zmdi-instagram"></i></a>
+                            <a href="#"><i class="zmdi zmdi-twitter"></i></a>
+                            <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
+                        </div>
+                        <!-- Info -->
+                        <div class="speaker-info">
+                            <h5>Susan Hopkins</h5>
+                            <p>UX Manager</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Speaker Area -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp" data-wow-delay="300ms">
+                        <!-- Thumb -->
+                        <div class="speaker-single-thumb">
+                            <img src="img/bg-img/9.jpg" alt="">
+                        </div>
+                        <!-- Social Info -->
+                        <div class="social-info">
+                            <a href="#"><i class="zmdi zmdi-facebook"></i></a>
+                            <a href="#"><i class="zmdi zmdi-instagram"></i></a>
+                            <a href="#"><i class="zmdi zmdi-twitter"></i></a>
+                            <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
+                        </div>
+                        <!-- Info -->
+                        <div class="speaker-info">
+                            <h5>Michael Fowler</h5>
+                            <p>Product Design</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="more-speaker-btn text-center mt-20 mb-40 wow fadeInUp" data-wow-delay="300ms">
+                        <a class="btn confer-btn-white" href="#">view all Speaker <i class="zmdi zmdi-long-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Our Speakings Area End -->
+
+    <!-- Our Schedule Area Start -->
+    <section class="our-schedule-area section-padding-100">
+        <div class="container">
+            <div class="row">
+                <!-- Heading -->
+                <div class="col-12">
+                    <div class="section-heading-2 text-center wow fadeInUp" data-wow-delay="300ms">
+                        <p>Our Timetable</p>
+                        <h4>Schedule Plan</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
                     <div class="schedule-tab">
-                        <ul class="nav nav-tabs" role="tablist" style="justify-content: center; margin-bottom: 30px;">
+                        <!-- Nav Tabs -->
+                        <ul class="nav nav-tabs wow fadeInUp" data-wow-delay="300ms" id="conferScheduleTab" role="tablist">
                             <li class="nav-item">
-                              <a class="nav-link active" id="day1-tab" data-toggle="tab" href="#tabs-1" role="tab" aria-controls="tabs-1" aria-selected="true" style="text-align: center;">
-                                <h5 style="margin: 0;">Day 1</h5>
-                                <p style="margin: 0;">May 04, 2019</p>
-                              </a>
+                                <a class="nav-link active" id="monday-tab" data-toggle="tab" href="#step-one" role="tab" aria-controls="step-one" aria-expanded="true">Monday <br> <span>January 14, 2019</span></a>
                             </li>
+                            <!-- Nav Item -->
                             <li class="nav-item">
-                              <a class="nav-link" id="day2-tab" data-toggle="tab" href="#tabs-2" role="tab" aria-controls="tabs-2" aria-selected="false" style="text-align: center;">
-                                <h5 style="margin: 0;">Day 2</h5>
-                                <p style="margin: 0;">May 05, 2019</p>
-                              </a>
+                                <a class="nav-link" id="tuesday-tab" data-toggle="tab" href="#step-two" role="tab" aria-controls="step-two" aria-expanded="true">Tuesday <br> <span>January 15, 2019</span></a>
                             </li>
-                          </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="tabs-1" role="tabpanel">
-                                <div class="st-content">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-lg-3">
-                                                <div class="sc-pic">
-                                                    <img src="{% static 'img/day/Veena-George.webp' %}" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-5">
-                                                <div class="sc-text">
-                                                    <h4>Inauguration Ceremony - Address by Hon. Health Minister Veena George</h4>
-                                                    
-                                                </div>
-                                            </div>
-                                           
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="st-content">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-lg-3">
-                                                <div class="sc-pic">
-                                                    <img src="img/day/MCT-Oil-for-Skin-Scientific-Insights-Into-Topical-Use-Absorption-and-Dermatological-Benefits-2-1024x585.webp" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-5">
-                                                <div class="sc-text">
-                                                    <h4>Session 1 - Understanding Skin Health: The Science Behind Natural Skin</h4>
-                                                
-                                                </div>
-                                            </div>
-                                        
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="st-content">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-lg-3">
-                                                <div class="sc-pic">
-                                                    <img src="img/schedule/schedule-3.jpg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-5">
-                                                <div class="sc-text">
-                                                    <h4>Session 2 - Embracing Your Natural Skin: Myths and Facts</h4>
-                                                    
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="st-content">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-lg-3">
-                                                <div class="sc-pic">
-                                                    <img src="img/schedule/schedule-4.jpg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-5">
-                                                <div class="sc-text">
-                                                    <h4>Free Skin Clinic</h4>
-                                                    
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="st-content">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-lg-3">
-                                                <div class="sc-pic">
-                                                    <img src="img/day/pearle-maaney_153329618220.jpg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-5">
-                                                <div class="sc-text">
-                                                    <h4>Evening Session - Celebrity Talk: "Natural Skin, Real Confidence"</h4>
-                                                    
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <!-- Nav Item -->
+                            <li class="nav-item">
+                                <a class="nav-link" id="wednesday-tab" data-toggle="tab" href="#step-three" role="tab" aria-controls="step-three" aria-expanded="true">Wednesday <br> <span>January 16, 2019</span></a>
+                            </li>
+                        </ul>
+                    </div>
 
-                            <div class="tab-pane" id="tabs-2" role="tabpanel">
-                                <div class="st-content">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-lg-3">
-                                                <div class="sc-pic">
-                                                    <img src="img/schedule/schedule-1.jpg" alt="">
+                    <!-- Tab Content -->
+                    <div class="tab-content" id="conferScheduleTabContent">
+                        <div class="tab-pane fade show active" id="step-one" role="tabpanel" aria-labelledby="monday-tab">
+                            <!-- Single Tab Content -->
+                            <div class="single-tab-content">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <!-- Single Schedule Area -->
+                                        <div class="single-schedule-area d-flex flex-wrap justify-content-between align-items-center wow fadeInUp" data-wow-delay="300ms">
+                                            <!-- Single Schedule Thumb and Info -->
+                                            <div class="single-schedule-tumb-info d-flex align-items-center">
+                                                <!-- Single Schedule Thumb -->
+                                                <div class="single-schedule-tumb">
+                                                    <img src="img/bg-img/10.jpg" alt="">
+                                                </div>
+                                                <!-- Single Schedule Info -->
+                                                <div class="single-schedule-info">
+                                                    <h6>Dealing with Difficult People</h6>
+                                                    <p>by <span>Gary Armstrong</span> / Ceo of Confer</p>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-5">
-                                                <div class="sc-text">
-                                                    <h4> Advances in Dermatology: From Treatment to Aesthetic Solutions</h4>
-                                                    
+                                            <!-- Single Schedule Info -->
+                                            <div class="schedule-time-place">
+                                                <p><i class="zmdi zmdi-time"></i> 12-14 Jan 2019</p>
+                                                <p><i class="zmdi zmdi-map"></i> Mountain Resort, Phoenix, USA</p>
+                                            </div>
+                                            <!-- Schedule Btn -->
+                                            <a href="#" class="btn confer-btn">View More <i class="zmdi zmdi-long-arrow-right"></i></a>
+                                        </div>
+
+                                        <!-- Single Schedule Area -->
+                                        <div class="single-schedule-area d-flex flex-wrap justify-content-between align-items-center wow fadeInUp" data-wow-delay="300ms">
+                                            <!-- Single Schedule Thumb and Info -->
+                                            <div class="single-schedule-tumb-info d-flex align-items-center">
+                                                <!-- Single Schedule Thumb -->
+                                                <div class="single-schedule-tumb">
+                                                    <img src="img/bg-img/11.jpg" alt="">
+                                                </div>
+                                                <!-- Single Schedule Info -->
+                                                <div class="single-schedule-info">
+                                                    <h6>Crop Insurance Conference</h6>
+                                                    <p>by <span>Amanda Hudson</span> / Ceo of Confer</p>
                                                 </div>
                                             </div>
-                                            
+                                            <!-- Single Schedule Info -->
+                                            <div class="schedule-time-place">
+                                                <p><i class="zmdi zmdi-time"></i> 12-14 Jan 2019</p>
+                                                <p><i class="zmdi zmdi-map"></i> Mountain Resort, Phoenix, USA</p>
+                                            </div>
+                                            <!-- Schedule Btn -->
+                                            <a href="#" class="btn confer-btn">View More <i class="zmdi zmdi-long-arrow-right"></i></a>
+                                        </div>
+
+                                        <!-- Single Schedule Area -->
+                                        <div class="single-schedule-area d-flex flex-wrap justify-content-between align-items-center wow fadeInUp" data-wow-delay="300ms">
+                                            <!-- Single Schedule Thumb and Info -->
+                                            <div class="single-schedule-tumb-info d-flex align-items-center">
+                                                <!-- Single Schedule Thumb -->
+                                                <div class="single-schedule-tumb">
+                                                    <img src="img/bg-img/12.jpg" alt="">
+                                                </div>
+                                                <!-- Single Schedule Info -->
+                                                <div class="single-schedule-info">
+                                                    <h6>Capdm Executive Conference</h6>
+                                                    <p>by <span>Martha Burke</span> / Ceo of Confer</p>
+                                                </div>
+                                            </div>
+                                            <!-- Single Schedule Info -->
+                                            <div class="schedule-time-place">
+                                                <p><i class="zmdi zmdi-time"></i> 12-14 Jan 2019</p>
+                                                <p><i class="zmdi zmdi-map"></i> Mountain Resort, Phoenix, USA</p>
+                                            </div>
+                                            <!-- Schedule Btn -->
+                                            <a href="#" class="btn confer-btn">View More <i class="zmdi zmdi-long-arrow-right"></i></a>
+                                        </div>
+
+                                        <!-- Single Schedule Area -->
+                                        <div class="single-schedule-area d-flex flex-wrap justify-content-between align-items-center wow fadeInUp" data-wow-delay="300ms">
+                                            <!-- Single Schedule Thumb and Info -->
+                                            <div class="single-schedule-tumb-info d-flex align-items-center">
+                                                <!-- Single Schedule Thumb -->
+                                                <div class="single-schedule-tumb">
+                                                    <img src="img/bg-img/13.jpg" alt="">
+                                                </div>
+                                                <!-- Single Schedule Info -->
+                                                <div class="single-schedule-info">
+                                                    <h6>Street Food Convention</h6>
+                                                    <p>by <span>Jeffrey Morales</span> / Ceo of Confer</p>
+                                                </div>
+                                            </div>
+                                            <!-- Single Schedule Info -->
+                                            <div class="schedule-time-place">
+                                                <p><i class="zmdi zmdi-time"></i> 12-14 Jan 2019</p>
+                                                <p><i class="zmdi zmdi-map"></i> Mountain Resort, Phoenix, USA</p>
+                                            </div>
+                                            <!-- Schedule Btn -->
+                                            <a href="#" class="btn confer-btn">View More <i class="zmdi zmdi-long-arrow-right"></i></a>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="st-content">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-lg-3">
-                                                <div class="sc-pic">
-                                                    <img src="img/schedule/schedule-2.jpg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-5">
-                                                <div class="sc-text">
-                                                    <h4>Preventive Care: How to Protect Your Skin Naturally</h4>
-                                                    
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="st-content">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-lg-3">
-                                                <div class="sc-pic">
-                                                    <img src="img/schedule/schedule-3.jpg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-5">
-                                                <div class="sc-text">
-                                                    <h4>Addressing Skin Conditions: Practical Solutions from Experts</h4>
-                                                    
-                                                </div>
-                                            </div>
-                                           
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="st-content">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-lg-3">
-                                                <div class="sc-pic">
-                                                    <img src="img/schedule/schedule-4.jpg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-5">
-                                                <div class="sc-text">
-                                                    <h4>Closing Session: Concluding Address by Hon. Minister</h4>
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                
-                                            </div>
+
+                                    <!-- More Schedule Btn -->
+                                    <div class="col-12">
+                                        <div class="more-schedule-btn text-center mt-50 wow fadeInUp" data-wow-delay="300ms">
+                                            <a href="#" class="btn confer-gb-btn">Dowload schedule (Pdf)</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            
+                        </div>
+
+                        <div class="tab-pane fade" id="step-two" role="tabpanel" aria-labelledby="tuesday-tab">
+                            <!-- Single Tab Content -->
+                            <div class="single-tab-content">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <!-- Single Schedule Area -->
+                                        <div class="single-schedule-area d-flex flex-wrap justify-content-between align-items-center wow fadeInUp" data-wow-delay="300ms">
+                                            <!-- Single Schedule Thumb and Info -->
+                                            <div class="single-schedule-tumb-info d-flex align-items-center">
+                                                <!-- Single Schedule Thumb -->
+                                                <div class="single-schedule-tumb">
+                                                    <img src="img/bg-img/11.jpg" alt="">
+                                                </div>
+                                                <!-- Single Schedule Info -->
+                                                <div class="single-schedule-info">
+                                                    <h6>Crop Insurance Conference</h6>
+                                                    <p>by <span>Amanda Hudson</span> / Ceo of Confer</p>
+                                                </div>
+                                            </div>
+                                            <!-- Single Schedule Info -->
+                                            <div class="schedule-time-place">
+                                                <p><i class="zmdi zmdi-time"></i> 12-14 Jan 2019</p>
+                                                <p><i class="zmdi zmdi-map"></i> Mountain Resort, Phoenix, USA</p>
+                                            </div>
+                                            <!-- Schedule Btn -->
+                                            <a href="#" class="btn confer-btn">View More <i class="zmdi zmdi-long-arrow-right"></i></a>
+                                        </div>
+
+                                        <!-- Single Schedule Area -->
+                                        <div class="single-schedule-area d-flex flex-wrap justify-content-between align-items-center wow fadeInUp" data-wow-delay="300ms">
+                                            <!-- Single Schedule Thumb and Info -->
+                                            <div class="single-schedule-tumb-info d-flex align-items-center">
+                                                <!-- Single Schedule Thumb -->
+                                                <div class="single-schedule-tumb">
+                                                    <img src="img/bg-img/12.jpg" alt="">
+                                                </div>
+                                                <!-- Single Schedule Info -->
+                                                <div class="single-schedule-info">
+                                                    <h6>Capdm Executive Conference</h6>
+                                                    <p>by <span>Martha Burke</span> / Ceo of Confer</p>
+                                                </div>
+                                            </div>
+                                            <!-- Single Schedule Info -->
+                                            <div class="schedule-time-place">
+                                                <p><i class="zmdi zmdi-time"></i> 12-14 Jan 2019</p>
+                                                <p><i class="zmdi zmdi-map"></i> Mountain Resort, Phoenix, USA</p>
+                                            </div>
+                                            <!-- Schedule Btn -->
+                                            <a href="#" class="btn confer-btn">View More <i class="zmdi zmdi-long-arrow-right"></i></a>
+                                        </div>
+
+                                        <!-- Single Schedule Area -->
+                                        <div class="single-schedule-area d-flex flex-wrap justify-content-between align-items-center wow fadeInUp" data-wow-delay="300ms">
+                                            <!-- Single Schedule Thumb and Info -->
+                                            <div class="single-schedule-tumb-info d-flex align-items-center">
+                                                <!-- Single Schedule Thumb -->
+                                                <div class="single-schedule-tumb">
+                                                    <img src="img/bg-img/13.jpg" alt="">
+                                                </div>
+                                                <!-- Single Schedule Info -->
+                                                <div class="single-schedule-info">
+                                                    <h6>Street Food Convention</h6>
+                                                    <p>by <span>Jeffrey Morales</span> / Ceo of Confer</p>
+                                                </div>
+                                            </div>
+                                            <!-- Single Schedule Info -->
+                                            <div class="schedule-time-place">
+                                                <p><i class="zmdi zmdi-time"></i> 12-14 Jan 2019</p>
+                                                <p><i class="zmdi zmdi-map"></i> Mountain Resort, Phoenix, USA</p>
+                                            </div>
+                                            <!-- Schedule Btn -->
+                                            <a href="#" class="btn confer-btn">View More <i class="zmdi zmdi-long-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <!-- More Schedule Btn -->
+                                    <div class="col-12">
+                                        <div class="more-schedule-btn text-center mt-50 wow fadeInUp" data-wow-delay="300ms">
+                                            <a href="#" class="btn confer-gb-btn">Dowload schedule (Pdf)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="step-three" role="tabpanel" aria-labelledby="wednesday-tab">
+                            <!-- Single Tab Content -->
+                            <div class="single-tab-content">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <!-- Single Schedule Area -->
+                                        <div class="single-schedule-area d-flex flex-wrap justify-content-between align-items-center wow fadeInUp" data-wow-delay="300ms">
+                                            <!-- Single Schedule Thumb and Info -->
+                                            <div class="single-schedule-tumb-info d-flex align-items-center">
+                                                <!-- Single Schedule Thumb -->
+                                                <div class="single-schedule-tumb">
+                                                    <img src="img/bg-img/10.jpg" alt="">
+                                                </div>
+                                                <!-- Single Schedule Info -->
+                                                <div class="single-schedule-info">
+                                                    <h6>Dealing with Difficult People</h6>
+                                                    <p>by <span>Gary Armstrong</span> / Ceo of Confer</p>
+                                                </div>
+                                            </div>
+                                            <!-- Single Schedule Info -->
+                                            <div class="schedule-time-place">
+                                                <p><i class="zmdi zmdi-time"></i> 12-14 Jan 2019</p>
+                                                <p><i class="zmdi zmdi-map"></i> Mountain Resort, Phoenix, USA</p>
+                                            </div>
+                                            <!-- Schedule Btn -->
+                                            <a href="#" class="btn confer-btn">View More <i class="zmdi zmdi-long-arrow-right"></i></a>
+                                        </div>
+
+                                        <!-- Single Schedule Area -->
+                                        <div class="single-schedule-area d-flex flex-wrap justify-content-between align-items-center wow fadeInUp" data-wow-delay="300ms">
+                                            <!-- Single Schedule Thumb and Info -->
+                                            <div class="single-schedule-tumb-info d-flex align-items-center">
+                                                <!-- Single Schedule Thumb -->
+                                                <div class="single-schedule-tumb">
+                                                    <img src="img/bg-img/13.jpg" alt="">
+                                                </div>
+                                                <!-- Single Schedule Info -->
+                                                <div class="single-schedule-info">
+                                                    <h6>Street Food Convention</h6>
+                                                    <p>by <span>Jeffrey Morales</span> / Ceo of Confer</p>
+                                                </div>
+                                            </div>
+                                            <!-- Single Schedule Info -->
+                                            <div class="schedule-time-place">
+                                                <p><i class="zmdi zmdi-time"></i> 12-14 Jan 2019</p>
+                                                <p><i class="zmdi zmdi-map"></i> Mountain Resort, Phoenix, USA</p>
+                                            </div>
+                                            <!-- Schedule Btn -->
+                                            <a href="#" class="btn confer-btn">View More <i class="zmdi zmdi-long-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <!-- More Schedule Btn -->
+                                    <div class="col-12">
+                                        <div class="more-schedule-btn text-center mt-50 wow fadeInUp" data-wow-delay="300ms">
+                                            <a href="#" class="btn confer-gb-btn">Dowload schedule (Pdf)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Schedule Section End -->
+    <!-- Our Schedule Area End -->
 
-
-
-    <!-- Contact Section Begin -->
-    <section class="contact-section spad">
+    <!-- Our Ticket Pricing Table Area Start -->
+    <section class="our-ticket-pricing-table-area bg-img bg-gradient-overlay section-padding-100-0 jarallax" style="background-image: url(img/bg-img/14.jpg);">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="section-title">
-                        <h2>Location</h2>
-                        <p>Get directions to our event center</p>
-                    </div>
-                    <div class="cs-text">
-                        <div class="ct-address">
-                            <span>Address:</span>
-                            <p>01 Pascale Springs Apt. 339, NY City <br />United State</p>
-                        </div>
-                        <ul>
-                            <li>
-                                <span>Phone:</span>
-                                (+12)-345-67-8910
-                            </li>
-                            <li>
-                                <span>Email:</span>
-                                info.colorlib@gmail.com
-                            </li>
-                        </ul>
+                <!-- Heading -->
+                <div class="col-12">
+                    <div class="section-heading text-center wow fadeInUp" data-wow-delay="300ms">
+                        <p>Choose a Ticket</p>
+                        <h4>Ticket Pricing</h4>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="cs-map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52901.38789495531!2d-118.19465514866786!3d34.03523211493029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2cf71ad83ff9f%3A0x518b28657f4543b7!2sEast%20Los%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1579763856144!5m2!1sen!2sbd"
-                            height="400" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+
+            <div class="row">
+                <!-- Single Ticket Pricing Table -->
+                <div class="col-12 col-lg-4">
+                    <div class="single-ticket-pricing-table text-center mb-100 wow fadeInUp" data-wow-delay="300ms">
+                        <h6 class="ticket-plan">1 day pass</h6>
+                        <!-- Ticket Icon -->
+                        <div class="ticket-icon">
+                            <img src="img/core-img/p1.png" alt="">
+                        </div>
+                        <h2 class="ticket-price"><span>$</span>59</h2>
+                        <a href="#" class="btn confer-btn w-100 mb-30">Get Tickets <i class="zmdi zmdi-long-arrow-right"></i></a>
+                        <!-- Ticket Pricing Table Details -->
+                        <div class="ticket-pricing-table-details">
+                            <p><i class="zmdi zmdi-check"></i> One Day Conference Ticket</p>
+                            <p><i class="zmdi zmdi-check"></i> Coffee-break</p>
+                            <p><i class="zmdi zmdi-check"></i> Lunch and Networking</p>
+                            <p><i class="zmdi zmdi-check"></i> Keynote talk</p>
+                            <p><i class="zmdi zmdi-check"></i> Talk to the Editors Session</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Ticket Pricing Table -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-ticket-pricing-table active text-center mb-100 wow fadeInUp" data-wow-delay="300ms">
+                        <h6 class="ticket-plan">Full pass</h6>
+                        <!-- Ticket Icon -->
+                        <div class="ticket-icon">
+                            <img src="img/core-img/p2.png" alt="">
+                        </div>
+                        <h2 class="ticket-price"><span>$</span>99</h2>
+                        <a href="#" class="btn confer-btn w-100 mb-30">Get Tickets <i class="zmdi zmdi-long-arrow-right"></i></a>
+                        <!-- Ticket Pricing Table Details -->
+                        <div class="ticket-pricing-table-details">
+                            <p><i class="zmdi zmdi-check"></i> One Day Conference Ticket</p>
+                            <p><i class="zmdi zmdi-check"></i> Coffee-break</p>
+                            <p><i class="zmdi zmdi-check"></i> Lunch and Networking</p>
+                            <p><i class="zmdi zmdi-check"></i> Keynote talk</p>
+                            <p><i class="zmdi zmdi-check"></i> Talk to the Editors Session</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Ticket Pricing Table -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-ticket-pricing-table text-center mb-100 wow fadeInUp" data-wow-delay="300ms">
+                        <h6 class="ticket-plan">Group pass</h6>
+                        <!-- Ticket Icon -->
+                        <div class="ticket-icon">
+                            <img src="img/core-img/p3.png" alt="">
+                        </div>
+                        <h2 class="ticket-price"><span>$</span>199</h2>
+                        <a href="#" class="btn confer-btn w-100 mb-30">Get Tickets <i class="zmdi zmdi-long-arrow-right"></i></a>
+                        <!-- Ticket Pricing Table Details -->
+                        <div class="ticket-pricing-table-details">
+                            <p><i class="zmdi zmdi-check"></i> One Day Conference Ticket</p>
+                            <p><i class="zmdi zmdi-check"></i> Coffee-break</p>
+                            <p><i class="zmdi zmdi-check"></i> Lunch and Networking</p>
+                            <p><i class="zmdi zmdi-check"></i> Keynote talk</p>
+                            <p><i class="zmdi zmdi-check"></i> Talk to the Editors Session</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Contact Section End -->
+    <!-- Our Ticket Pricing Table Area End -->
 
-    <!-- Footer Section Begin -->
-    <footer class="footer-section">
+    <!-- Our Sponsor And Client Area Start -->
+    <section class="our-sponsor-client-area section-padding-100">
         <div class="container">
-           
-            </div>
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="footer-text">
-                        <div class="ft-logo">
-                            <a href="" class="footer-logo"><img src="img/logo_derma.webp" alt=""></a>
+                <!-- Heading -->
+                <div class="col-12">
+                    <div class="section-heading-2 text-center wow fadeInUp" data-wow-delay="300ms">
+                        <p>Partners &amp; Sponsors</p>
+                        <h4>OFFICIAL SPONSOR</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <!-- Our Sponsor area -->
+                    <div class="our-sponsor-area d-flex flex-wrap">
+                        <!-- Single Sponsor -->
+                        <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
+                            <a href="#"><img src="img/core-img/p-1.png" alt=""></a>
                         </div>
-                        <ul>
-                            <li><a href="#">Home</a></li>""
-                            <li><a href="#">Speakers</a></li>
-                            <li><a href="#">Schedule</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                        <div class="copyright-text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
-                        <div class="ft-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        <!-- Single Sponsor -->
+                        <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
+                            <a href="#"><img src="img/core-img/p-2.png" alt=""></a>
+                        </div>
+                        <!-- Single Sponsor -->
+                        <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
+                            <a href="#"><img src="img/core-img/p-3.png" alt=""></a>
+                        </div>
+                        <!-- Single Sponsor -->
+                        <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
+                            <a href="#"><img src="img/core-img/p-4.png" alt=""></a>
+                        </div>
+                        <!-- Single Sponsor -->
+                        <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
+                            <a href="#"><img src="img/core-img/p-5.png" alt=""></a>
+                        </div>
+                        <!-- Single Sponsor -->
+                        <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
+                            <a href="#"><img src="img/core-img/p-6.png" alt=""></a>
+                        </div>
+                        <!-- Single Sponsor -->
+                        <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
+                            <a href="#"><img src="img/core-img/p-7.png" alt=""></a>
+                        </div>
+                        <!-- Single Sponsor -->
+                        <div class="single-sponsor wow fadeInUp" data-wow-delay="300ms">
+                            <a href="#"><img src="img/core-img/p-8.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Our client area -->
+                <div class="col-12">
+                    <div class="our-client-area mt-100 wow fadeInUp" data-wow-delay="300ms">
+                        <!-- client Slider -->
+                        <div class="client-area owl-carousel">
+                            <!-- Single client Slider -->
+                            <div class="single-client-content">
+                                <!-- Single client Text -->
+                                <div class="single-client-text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                                    <!-- Single client Thumb and info -->
+                                    <div class="single-client-thumb-info d-flex align-items-center">
+                                        <!-- Single client Thumb -->
+                                        <div class="single-client-thumb">
+                                            <img src="img/bg-img/15.jpg" alt="">
+                                        </div>
+                                        <!-- Single client Info -->
+                                        <div class="client-info">
+                                            <h6>Maria Hernandez</h6>
+                                            <p>UX Manager</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Single client Icon -->
+                                <div class="client-icon">
+                                    <i class="zmdi zmdi-quote"></i>
+                                </div>
+                            </div>
+
+                            <!-- Single client Slider -->
+                            <div class="single-client-content">
+                                <!-- Single client Text -->
+                                <div class="single-client-text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                                    <!-- Single client Thumb and info -->
+                                    <div class="single-client-thumb-info d-flex align-items-center">
+                                        <!-- Single client Thumb -->
+                                        <div class="single-client-thumb">
+                                            <img src="img/bg-img/16.jpg" alt="">
+                                        </div>
+                                        <!-- Single client Info -->
+                                        <div class="client-info">
+                                            <h6>Jacqueline Myers</h6>
+                                            <p>UX Manager</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Single client Icon -->
+                                <div class="client-icon">
+                                    <i class="zmdi zmdi-quote"></i>
+                                </div>
+                            </div>
+
+                            <!-- Single client Slider -->
+                            <div class="single-client-content">
+                                <!-- Single client Text -->
+                                <div class="single-client-text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                                    <!-- Single client Thumb and info -->
+                                    <div class="single-client-thumb-info d-flex align-items-center">
+                                        <!-- Single client Thumb -->
+                                        <div class="single-client-thumb">
+                                            <img src="img/bg-img/15.jpg" alt="">
+                                        </div>
+                                        <!-- Single client Info -->
+                                        <div class="client-info">
+                                            <h6>Maria Hernandez</h6>
+                                            <p>UX Manager</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Single client Icon -->
+                                <div class="client-icon">
+                                    <i class="zmdi zmdi-quote"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Our Sponsor And Client Area End -->
+
+    <!-- Our Blog Area Start -->
+    <section class="our-blog-area bg-img bg-gradient-overlay section-padding-100-60" style="background-image: url(img/bg-img/17.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Heading -->
+                    <div class="section-heading text-center wow fadeInUp" data-wow-delay="300ms">
+                        <p>Our Blog</p>
+                        <h4>Latest news</h4>
+                    </div>
+                </div>
+
+                <!-- Single Blog Area -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-blog-area wow fadeInUp" data-wow-delay="300ms">
+                        <!-- Single blog Thumb -->
+                        <div class="single-blog-thumb">
+                            <img src="img/bg-img/18.jpg" alt="">
+                        </div>
+                        <div class="single-blog-text text-center">
+                            <a class="blog-title" href="#">Street Food Convention</a>
+                            <!-- Post Meta -->
+                            <div class="post-meta">
+                                <a class="post-date" href="#"><i class="zmdi zmdi-alarm-check"></i> January 14, 2019</a>
+                                <a class="post-author" href="#"><i class="zmdi zmdi-account"></i> Laura Green</a>
+                            </div>
+                            <p>Street Food Convention will showcase products like Packed food, beef and lamb, street food.</p>
+                        </div>
+                        <div class="blog-btn">
+                            <a href="#"><i class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Blog Area -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-blog-area wow fadeInUp" data-wow-delay="300ms">
+                        <!-- Single blog Thumb -->
+                        <div class="single-blog-thumb">
+                            <img src="img/bg-img/19.jpg" alt="">
+                        </div>
+                        <div class="single-blog-text text-center">
+                            <a class="blog-title" href="#">Tedx Moscow Conference</a>
+                            <!-- Post Meta -->
+                            <div class="post-meta">
+                                <a class="post-date" href="#"><i class="zmdi zmdi-alarm-check"></i>January 14, 2019</a>
+                                <a class="post-author" href="#"><i class="zmdi zmdi-account"></i>Laura Green</a>
+                            </div>
+                            <p>Street Food Convention will showcase products like Packed food, beef and lamb, street food.</p>
+                        </div>
+                        <div class="blog-btn">
+                            <a href="#"><i class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Blog Area -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-blog-area wow fadeInUp" data-wow-delay="300ms">
+                        <!-- Single blog Thumb -->
+                        <div class="single-blog-thumb">
+                            <img src="img/bg-img/20.jpg" alt="">
+                        </div>
+                        <div class="single-blog-text text-center">
+                            <a class="blog-title" href="#">Los Angeles Institute</a>
+                            <!-- Post Meta -->
+                            <div class="post-meta">
+                                <a class="post-date" href="#"><i class="zmdi zmdi-alarm-check"></i>January 14, 2019</a>
+                                <a class="post-author" href="#"><i class="zmdi zmdi-account"></i>Laura Green</a>
+                            </div>
+                            <p>Street Food Convention will showcase products like Packed food, beef and lamb, street food.</p>
+                        </div>
+                        <div class="blog-btn">
+                            <a href="#"><i class="zmdi zmdi-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Our Blog Area End -->
+
+    <!-- Contact Area Start -->
+    <section class="contact-our-area section-padding-100-0">
+        <div class="container">
+            <div class="row">
+                <!-- Heading -->
+                <div class="col-12">
+                    <div class="section-heading-2 text-center wow fadeInUp" data-wow-delay="300ms">
+                        <p>Have Question?</p>
+                        <h4>Contact us</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-between">
+                <div class="col-12 col-sm-3">
+                    <div class="contact-information mb-100">
+                        <!-- Single Contact Info -->
+                        <div class="single-contact-info wow fadeInUp" data-wow-delay="300ms">
+                            <p>Address:</p>
+                            <h6>184 Main Collins Street</h6>
+                        </div>
+                        <!-- Single Contact Info -->
+                        <div class="single-contact-info wow fadeInUp" data-wow-delay="300ms">
+                            <p>Phone:</p>
+                            <h6>(226) 446 9371</h6>
+                        </div>
+                        <!-- Single Contact Info -->
+                        <div class="single-contact-info wow fadeInUp" data-wow-delay="300ms">
+                            <p>Email:</p>
+                            <h6><a href="https://preview.colorlib.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="03606c6d65667143646e626a6f2d606c6e">[email&#160;protected]</a></h6>
+                        </div>
+                        <!-- Single Contact Info -->
+                        <div class="single-contact-info wow fadeInUp" data-wow-delay="300ms">
+                            <p>Website:</p>
+                            <h6>www.confer.com</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-8">
+                    <!-- Contact Form -->
+                    <div class="contact_from_area mb-100 clearfix wow fadeInUp" data-wow-delay="300ms">
+                        <div class="contact_form">
+                            <form action="https://preview.colorlib.com/theme/confer/mail.php" method="post" id="main_contact_form">
+                                <div class="contact_input_area">
+                                    <div id="success_fail_info"></div>
+                                    <div class="row">
+                                        <!-- Form Group -->
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control mb-30" name="name" id="name" placeholder="Your Name">
+                                            </div>
+                                        </div>
+                                        <!-- Form Group -->
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control mb-30" name="name" id="name2" placeholder="Last Name">
+                                            </div>
+                                        </div>
+                                        <!-- Form Group -->
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control mb-30" name="email" id="email" placeholder="E-mail">
+                                            </div>
+                                        </div>
+                                        <!-- Form Group -->
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control mb-30" name="subject" id="subject" placeholder="Your Number">
+                                            </div>
+                                        </div>
+                                        <!-- Form Group -->
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <textarea name="message" class="form-control mb-30" id="message" cols="30" rows="6" placeholder="Your Message *"></textarea>
+                                            </div>
+                                        </div>
+                                        <!-- Button -->
+                                        <div class="col-12">
+                                            <button type="submit" class="btn confer-btn">Send Message <i class="zmdi zmdi-long-arrow-right"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Area End -->
+
+    <!-- Footer Area Start -->
+    <footer class="footer-area bg-img bg-overlay-2 section-padding-100-0">
+        <!-- Main Footer Area -->
+        <div class="main-footer-area">
+            <div class="container">
+                <div class="row">
+                    <!-- Single Footer Widget Area -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="single-footer-widget mb-60 wow fadeInUp" data-wow-delay="300ms">
+                            <!-- Footer Logo -->
+                            <a href="#" class="footer-logo"><img src="img/core-img/logo.png" alt=""></a>
+                            <p>To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain.</p>
+
+                            <!-- Social Info -->
+                            <div class="social-info">
+                                <a href="#"><i class="zmdi zmdi-facebook"></i></a>
+                                <a href="#"><i class="zmdi zmdi-instagram"></i></a>
+                                <a href="#"><i class="zmdi zmdi-twitter"></i></a>
+                                <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single Footer Widget Area -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="single-footer-widget mb-60 wow fadeInUp" data-wow-delay="300ms">
+                            <!-- Widget Title -->
+                            <h5 class="widget-title">Contact</h5>
+
+                            <!-- Contact Area -->
+                            <div class="footer-contact-info">
+                                <p><i class="zmdi zmdi-map"></i> 184 Main Collins Street</p>
+                                <p><i class="zmdi zmdi-phone"></i> (226) 446 9371</p>
+                                <p><i class="zmdi zmdi-email"></i> <a href="https://preview.colorlib.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9efdf1f0f8fbecdef9f3fff7f2b0fdf1f3">[email&#160;protected]</a></p>
+                                <p><i class="zmdi zmdi-globe"></i> www.confer.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single Footer Widget Area -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="single-footer-widget mb-60 wow fadeInUp" data-wow-delay="300ms">
+                            <!-- Widget Title -->
+                            <h5 class="widget-title">Workshops</h5>
+
+                            <!-- Footer Nav -->
+                            <ul class="footer-nav">
+                                <li><a href="#">OSHA Compliance</a></li>
+                                <li><a href="#">Microsoft Excel Basics</a></li>
+                                <li><a href="#">Forum Speaker Series</a></li>
+                                <li><a href="#">Tedx Moscow Conference</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Single Footer Widget Area -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="single-footer-widget mb-60 wow fadeInUp" data-wow-delay="300ms">
+                            <!-- Widget Title -->
+                            <h5 class="widget-title">Gallery</h5>
+
+                            <!-- Footer Gallery -->
+                            <div class="footer-gallery">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <a href="img/bg-img/21.jpg" class="single-gallery-item"><img src="img/bg-img/21.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="img/bg-img/22.jpg" class="single-gallery-item"><img src="img/bg-img/22.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="img/bg-img/23.jpg" class="single-gallery-item"><img src="img/bg-img/23.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="img/bg-img/24.jpg" class="single-gallery-item"><img src="img/bg-img/24.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="img/bg-img/25.jpg" class="single-gallery-item"><img src="img/bg-img/25.jpg" alt=""></a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="img/bg-img/26.jpg" class="single-gallery-item"><img src="img/bg-img/26.jpg" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copywrite Area -->
+        <div class="container">
+            <div class="copywrite-content">
+                <div class="row">
+                    <!-- Copywrite Text -->
+                    <div class="col-12 col-md-6">
+                        <div class="copywrite-text">
+                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com/" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                        </div>
+                    </div>
+                    <!-- Footer Menu -->
+                    <div class="col-12 col-md-6">
+                        <div class="footer-menu">
+                            <ul class="nav">
+                                <li><a href="#"><i class="zmdi zmdi-circle"></i> Terms of Service</a></li>
+                                <li><a href="#"><i class="zmdi zmdi-circle"></i> Privacy Policy</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-    <!-- Footer Section End -->
+    <!-- Footer Area End -->
 
-    <!-- Js Plugins -->
-    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
-    <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
-    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
-    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script>
+    <!-- **** All JS Files ***** -->
+    <!-- jQuery 2.2.4 -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Popper -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- All Plugins -->
+    <script src="js/confer.bundle.js"></script>
+    <!-- Active -->
+    <script src="js/default-assets/active.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"93b203569830c87a","version":"2025.4.0-1-g37f21b1","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"cd0b4b3a733644fc843ef0b185f98241","b":1}' crossorigin="anonymous"></script>
 </body>
 
+
+<!-- Mirrored from preview.colorlib.com/theme/confer/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 May 2025 17:38:57 GMT -->
 </html>
