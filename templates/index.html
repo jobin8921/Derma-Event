@@ -23,10 +23,11 @@
 
 <body>
     <!-- Preloader -->
-    <!-- <div id="preloader">
+       <div id="preloader">
         <div class="loader"></div>
-    </div> -->
+    </div>
     <!-- /Preloader -->
+  
 
     <!-- Header Area Start -->
     <header class="header-area">
@@ -52,8 +53,8 @@
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul id="nav">
-                                <li class="active"><a href="index.html">Home</a></li>
-                                <li><a href="about.html">About Us</a></li>
+                                <li class="active"><a href="{% url 'home' %}">Home</a></li>
+                                <li><a href="{% url 'about' %}">About Us</a></li>
                                 <li><a href="schedule.html">Schedule</a></li>
                                 <li><a href="speakers.html">Speakears</a></li>
                                 <li><a href="blog.html">Blog</a></li>
