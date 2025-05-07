@@ -14,6 +14,20 @@ def home(request):
 def about(request):
     return render(request, 'about.html')
 
+def contact(request):
+    return render(request, 'contact.html')
+
+def schedule(request):
+    return render(request, 'schedule.html')
+
+
+def blog(request):
+    return render(request, 'blog.html')
+
+
+def speakers(request):
+    return render(request, 'speakers.html')
+
 
 
 def registration_success(request):
