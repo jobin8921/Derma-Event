@@ -26,7 +26,14 @@ SECRET_KEY = "django-insecure-7tw$^e$@f^2b#zh$9060-$jgo$ogo6awvaan8lr(3%t+w-#a6q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1:8000','https://derma-event-production.up.railway.app/','127.0.0.1']
+
+
+
+
+CSRF_TRUSTED_ORIGINS = [
+"https://derma-event-production.up.railway.app/"
+]
 
 
 # Application definition
