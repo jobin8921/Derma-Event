@@ -28,6 +28,8 @@ def blog(request):
 def speakers(request):
     return render(request, 'speakers.html')
 
+def register(request):
+    return render(request, 'register.html')
 
 
 def registration_success(request):
