@@ -39,8 +39,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Use environment variables
 SECRET_KEY = env("DJANGO_SECRET_KEY")
 DEBUG = env("DJANGO_DEBUG")
-
-ALLOWED_HOSTS = ['127.0.0.1:8000','derma-event-production.up.railway.app','127.0.0.1']
+ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS")
 
 
 
