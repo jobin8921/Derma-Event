@@ -37,7 +37,7 @@ environ.Env.read_env()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Use environment variables
-SECRET_KEY = env("DJANGO_SECRET_KEY")
+SECRET_KEY = env("django-insecure-7tw$^e$@f^2b#zh$9060-$jgo$ogo6awvaan8lr(3%t+w-#a6q")
 DEBUG = env("DJANGO_DEBUG")
 ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS")
 
