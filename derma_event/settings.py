@@ -25,26 +25,26 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-7tw$^e$@f^2b#zh$9060-$jgo$ogo6awvaan8lr(3%t+w-#a6q"
 
 
-
-
 DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1:8000','derma-event-production.up.railway.app','127.0.0.1']
 
 
-
-
-
-
-
 CSRF_TRUSTED_ORIGINS = [
+    
 "https://derma-event-production.up.railway.app/"
+
 ]
+
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -53,6 +53,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "registration",
     "social_django",
+    
+
+    
 ]
 
 MIDDLEWARE = [
@@ -64,7 +67,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    
     'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
