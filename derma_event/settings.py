@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import os
-import environ
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,21 +24,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "django-insecure-7tw$^e$@f^2b#zh$9060-$jgo$ogo6awvaan8lr(3%t+w-#a6q"
 
-# SECURITY WARNING: don't run with debug turned on in production!
-# Initialize environment variables
-env = environ.Env(
-    DEBUG=(bool, False)
-)
 
-# Load .env file in development
-environ.Env.read_env()
 
-BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Use environment variables
-SECRET_KEY = env("django-insecure-7tw$^e$@f^2b#zh$9060-$jgo$ogo6awvaan8lr(3%t+w-#a6q")
-DEBUG = env("DJANGO_DEBUG")
-ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS")
+DEBUG = False
+
+ALLOWED_HOSTS = ['127.0.0.1:8000','derma-event-production.up.railway.app','127.0.0.1']
+
+
+
+ALLOWED_HOSTS = []
 
 
 
