@@ -32,7 +32,8 @@ ALLOWED_HOSTS = ['127.0.0.1:8000','derma-event-production.up.railway.app','127.0
 
 CSRF_TRUSTED_ORIGINS = [
     
-"https://derma-event-production.up.railway.app/"
+"https://derma-event-production.up.railway.app"
+
 
 ]
 
