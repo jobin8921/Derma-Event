@@ -16,6 +16,12 @@ urlpatterns = [
 
 
 
+    path('delete-news/<int:pk>/', views.delete_news, name='delete_news'),
+
+
+
+
+
 
 
 ]
