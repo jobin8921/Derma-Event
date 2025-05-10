@@ -2793,6 +2793,8 @@ input:required {
             overflow: hidden;
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
             transition: transform 0.3s ease;
+          border-radius: 12px; /* Optional: for rounded corners */
+
         }
         
         .poster-card:hover {
