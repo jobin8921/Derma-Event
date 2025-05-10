@@ -2822,4 +2822,22 @@ input:required {
                 transform: translateX(0);
             }
         }
-        
+               
+        @media (max-width: 768px) {
+            
+            
+
+            .feature-card {
+                padding: 30px 20px;
+            }
+            
+            .scrolling-cards {
+                height: 180px;
+            }
+            
+            .poster-card {
+                width: 135px;
+                height: 180px;
+                margin: 0 10px;
+            }
+        }
