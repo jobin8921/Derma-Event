@@ -2746,3 +2746,80 @@ input:required {
         margin-right: 3px; }
 
 /*# sourceMappingURL=style.css.map */
+
+
+
+
+
+
+ /* Scrolling Cards */
+        .scrolling-cards {
+            position: relative;
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+            z-index: 2;
+        }
+        
+        .scrolling-cards.top {
+            margin-bottom: 20px;
+        }
+        
+        .scrolling-cards.bottom {
+            margin-top: 20px;
+        }
+        
+        .card-container {
+            display: flex;
+            animation-duration: 30s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        
+        .scrolling-cards.top .card-container {
+            animation-name: scrollLeft;
+        }
+        
+        .scrolling-cards.bottom .card-container {
+            animation-name: scrollRight;
+        }
+        
+        .poster-card {
+            flex: 0 0 auto;
+            width: 180px;
+            height: 240px;
+            margin: 0 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .poster-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .poster-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        @keyframes scrollLeft {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        
+        @keyframes scrollRight {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+        
