@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-7tw$^e$@f^2b#zh$9060-$jgo$ogo6awvaan8lr(3%t+w-#a6q"
 
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1:8000','derma-event-production.up.railway.app','127.0.0.1']
 
