@@ -2824,3 +2824,101 @@ input:required {
                 transform: translateX(0);
             }
         }
+
+
+
+/* sponer regsiter css*/
+
+        /* Base section styling */
+.register-form-section {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  padding-top: 200px; /* Adjust based on navbar height */
+
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* Heading styles */
+.register-form-section h1,
+.register-form-section h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Google button styling */
+.google-register-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: #444;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.google-register-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.google-register-button:hover {
+  background-color: #eee;
+}
+
+/* Divider line */
+.register-form-section hr {
+  margin: 30px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form label {
+  font-weight: 600;
+  color: #555;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+/* Submit button */
+form button {
+  background-color: #ff66a6; /* light pink shade for skincare branding */
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #ff3385;
+}
