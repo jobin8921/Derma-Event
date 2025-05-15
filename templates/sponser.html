@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<section class="register-form-section">
+  <h1>Welcome to Sponser  Registration</h1>
+
+  <!-- Google OAuth Registration -->
+  <a class="google-register-button" href="{% url 'social:begin' 'google-oauth2' %}?next=/registration_success/">
+    <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo" />
+    Register with Google
+  </a>
+
+  <!-- Divider -->
+  <hr>
+  <h2> Register as a Sponsor</h2>
+
+  <!-- Sponsor Registration Form -->
+  <form action="" method="POST">
+    {% csrf_token %}
+    <label for="sponsor_name">Sponsor Name:</label>
+    <input type="text" id="sponsor_name" name="sponsor_name" required>
+
+    <label for="company">Company Name:</label>
+    <input type="text" id="company" name="company" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="message">Message or Interest:</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+
+    <button type="submit">Register as Sponsor</button>
+  </form>
+</section>
+
+
+
+{% endblock %}
