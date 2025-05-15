@@ -136,32 +136,52 @@
 
     <!-- About Us And Countdown Area Start -->
     <section class="about-us-countdown-area section-padding-100-0" id="about">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- About Content -->
-                <div class="col-12 col-md-6">
-                    <div class="about-content-text mb-80">
-                        <h6 class="wow fadeInUp" data-wow-delay="300ms">About Conference</h6>
-                        <h3 class="wow fadeInUp" data-wow-delay="300ms">Welcome to CHARMAM'25</h3>
-                        <p class="wow fadeInUp" data-wow-delay="300ms">Highlights of the Conclave
-                            Celebrity Participation: Engage with top influencers from the film and fashion industries promoting skin health awareness.
-                            Free Dermatology Clinics: Get personalized skin consultations, expert skin analysis, and customized care advice by leading dermatologists.
-                            Workshops & Live Demonstrations: Attend interactive sessions covering skincare routines, new treatments, and cosmetic dermatology advancements.
-                            Natural Skincare Exhibits: Explore organic and dermatologist-tested products presented by trusted skincare brands.
-                            Networking Opportunities: Connect with healthcare professionals, beauty experts, and fellow attendees passionate about skincare and wellness.
-                            Natural Skincare Exhibits: Explore organic and dermatologist-tested products presented by trusted skincare brands.
-                            Networking Opportunities: Connect with healthcare professionals, beauty experts, and fellow attendees passionate about skincare and wellness.</p>
-                        <a href="#" class="btn confer-btn mt-50 wow fadeInUp" data-wow-delay="300ms">Interested <i class="zmdi zmdi-long-arrow-right"></i></a>
-                    </div>
-                </div>
-                <!-- About Thumb -->
-                <div class="col-12 col-md-6">
-                    <div class="about-thumb mb-80 wow fadeInUp" data-wow-delay="300ms">
-                        <img src="{% static 'img/png-images/dermmaeventpng.png' %}" alt="" style="width: 700px; height: 600px;">
-                    </div>
-                </div>
-            </div>
+        <section class="about-section">
+            <div style="background: url("{% static 'img/backgrounds/conference-bg.jpg' %}") no-repeat center center / cover; padding: 100px 0; position: relative; font-family: Arial, sans-serif; color: white;">
+    <div style="background: rgba(0, 0, 0, 0.6); position: absolute; top: 0; right: 0; bottom: 0; left: 0;"></div>
+    <div style="position: relative; max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; padding: 0 20px; gap: 40px;">
+        <!-- Text Content -->
+        <div style="flex: 1 1 500px; animation: fadeIn 1.2s ease forwards;">
+            <h6 style="color: #f0a500; font-size: 16px; margin-bottom: 10px; text-transform: uppercase;">About Conference</h6>
+            <h3 style="color: #1851ae; font-size: 36px; margin-bottom: 20px;">Welcome to CHARMAM'25</h3>
+            <p style="line-height: 1.8; color: #e0e0e0; font-size: 16px;">
+                <strong>Highlights of the Conclave</strong><br><br>
+                • <strong>Celebrity Participation:</strong> Engage with top influencers from the film and fashion industries promoting skin health awareness.<br>
+                • <strong>Free Dermatology Clinics:</strong> Personalized consultations and expert advice.<br>
+                • <strong>Workshops & Demonstrations:</strong> Interactive sessions on skincare and cosmetic advancements.<br>
+                • <strong>Natural Skincare Exhibits:</strong> Explore organic, dermatologist-approved products.<br>
+                • <strong>Networking Opportunities:</strong> Connect with professionals and wellness enthusiasts.
+            </p>
+            <a href="#" style="display: inline-block; margin-top: 30px; padding: 12px 30px; background-color: #f0a500; color: black; border-radius: 30px; font-weight: bold; text-decoration: none; transition: background 0.3s ease;">Interested <span style="margin-left: 5px;">→</span></a>
         </div>
+        <!-- Image -->
+        <div style="flex: 1 1 500px; animation: fadeIn 1.5s ease forwards;">
+            <img src="{% static 'img/png-images/dermmaeventpng.png' %}" alt="CHARMAM Conference" style="width: 100%; max-width: 600px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
+    </div>
+
+    <!-- Inline Animation -->
+    <style>
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            h3 { font-size: 28px !important; }
+            p { font-size: 15px !important; }
+            div[style*="flex: 1 1 500px;"] {
+                flex: 1 1 100% !important;
+                text-align: center;
+            }
+            img {
+                margin-top: 30px;
+            }
+        }
+    </style>
+</div>
+
+        </section>
 
         <!-- Counter Up Area -->
         <div class="countdown-up-area">
