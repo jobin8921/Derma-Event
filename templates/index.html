@@ -70,53 +70,121 @@
     <!-- Welcome Area End -->
 
     <!-- About Us And Countdown Area Start -->
-    <section class="about-us-countdown-area section-padding-100-0" id="about">
-        <section class="about-section">
-            <div style="background: url("{% static 'img/backgrounds/conference-bg.jpg' %}") no-repeat center center / cover; padding: 100px 0; position: relative; font-family: Arial, sans-serif; color: white;">
-    <div style="background: rgba(0, 0, 0, 0.6); position: absolute; top: 0; right: 0; bottom: 0; left: 0;"></div>
-    <div style="position: relative; max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; padding: 0 20px; gap: 40px;">
-        <!-- Text Content -->
-        <div style="flex: 1 1 500px; animation: fadeIn 1.2s ease forwards;">
-            <h6 style="color: #f0a500; font-size: 16px; margin-bottom: 10px; text-transform: uppercase;">About Conference</h6>
-            <h3 style="color: #1851ae; font-size: 36px; margin-bottom: 20px;">Welcome to CHARMAM'25</h3>
-            <p style="line-height: 1.8; color: #e0e0e0; font-size: 16px;">
-                <strong>Highlights of the Conclave</strong><br><br>
-                • <strong>Celebrity Participation:</strong> Engage with top influencers from the film and fashion industries promoting skin health awareness.<br>
-                • <strong>Free Dermatology Clinics:</strong> Personalized consultations and expert advice.<br>
-                • <strong>Workshops & Demonstrations:</strong> Interactive sessions on skincare and cosmetic advancements.<br>
-                • <strong>Natural Skincare Exhibits:</strong> Explore organic, dermatologist-approved products.<br>
-                • <strong>Networking Opportunities:</strong> Connect with professionals and wellness enthusiasts.
+    <section id="about" style="
+    background: linear-gradient(to right, rgba(228, 225, 127, 0.7), rgba(228, 110, 110, 0.6)), 
+                url('{% static 'img/derma_img/derma5.jpg' %}') no-repeat center center/cover;
+    padding: 100px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    position: relative;
+">
+    <div style="
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        z-index: 1;
+        position: relative;
+    ">
+        <!-- Left Content -->
+        <div style="flex: 1 1 500px; animation: fadeInLeft 1s ease forwards;">
+            <h5 style="color: #f0a500; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">
+                Discover CHARMAM'25
+            </h5>
+            <h2 style="font-size: 40px; margin-bottom: 20px; font-weight: bold;">
+                A New Era of Skincare Innovation
+            </h2>
+            <p style="font-size: 17px; line-height: 1.8; color: #e0e0e0; margin-bottom: 30px;">
+                Join us at CHARMAM'25, where science, wellness, and beauty converge. Experience cutting-edge skincare technologies, expert talks, and a holistic view of dermatology in one transformative event. This is more than a conference—it's a movement toward radiant health and empowered self-care.
             </p>
-            <a href="#" style="display: inline-block; margin-top: 30px; padding: 12px 30px; background-color: #f0a500; color: black; border-radius: 30px; font-weight: bold; text-decoration: none; transition: background 0.3s ease;">Interested <span style="margin-left: 5px;">→</span></a>
+            <a href="#" style="
+                padding: 12px 28px;
+                background-color: #f0a500;
+                color: #000;
+                border-radius: 30px;
+                font-weight: bold;
+                text-decoration: none;
+                display: inline-block;
+                transition: background 0.3s ease-in-out;
+            " 
+            onmouseover="this.style.backgroundColor='#fff'; this.style.color='#f0a500';"
+            onmouseout="this.style.backgroundColor='#f0a500'; this.style.color='#000';">
+                Learn More →
+            </a>
         </div>
-        <!-- Image -->
-        <div style="flex: 1 1 500px; animation: fadeIn 1.5s ease forwards;">
-            <img src="{% static 'img/png-images/dermmaeventpng.png' %}" alt="CHARMAM Conference" style="width: 100%; max-width: 600px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+
+        <!-- Right Image Card -->
+        <div style="
+            flex: 1 1 500px;
+            animation: fadeInRight 1.2s ease forwards;
+            display: flex;
+            justify-content: center;
+        ">
+            <div style="
+            perspective: 1000px;
+            max-width: 520px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        ">
+            <img src="{% static 'img/png-images/dermmaeventpng.png' %}" alt="CHARMAM Conference" style="
+            width: 100%;
+            max-width: 500px;
+            display: block;
+            margin: auto;
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+            transform: perspective(1000px) rotateX(10deg) rotateY(-10deg) scale(1.05);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        "
+        onmouseover="this.style.transform='perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1.1)'; this.style.boxShadow='0 40px 80px rgba(0,0,0,0.7)'"
+        onmouseout="this.style.transform='perspective(1000px) rotateX(10deg) rotateY(-10deg) scale(1.05)'; this.style.boxShadow='0 30px 60px rgba(0,0,0,0.6)'">
+        
+        </div>
+        
         </div>
     </div>
 
-    <!-- Inline Animation -->
+    <!-- Animations & Responsive Styles -->
     <style>
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
         }
 
         @media (max-width: 768px) {
-            h3 { font-size: 28px !important; }
-            p { font-size: 15px !important; }
-            div[style*="flex: 1 1 500px;"] {
-                flex: 1 1 100% !important;
+            #about {
+                padding: 60px 20px;
                 text-align: center;
             }
-            img {
-                margin-top: 30px;
+
+            #about h2 {
+                font-size: 28px !important;
+            }
+
+            #about p {
+                font-size: 15px;
+            }
+
+            div[style*="flex: 1 1 500px;"] {
+                flex: 1 1 100% !important;
+            }
+
+            a {
+                padding: 10px 20px !important;
             }
         }
     </style>
-</div>
-
-        </section>
+</section>
 
         <!-- Counter Up Area -->
         <div class="countdown-up-area">
