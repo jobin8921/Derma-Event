@@ -2922,3 +2922,22 @@ form button {
 form button:hover {
   background-color: #ff3385;
 }
+
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            h3 { font-size: 28px !important; }
+            p { font-size: 15px !important; }
+            div[style*="flex: 1 1 500px;"] {
+                flex: 1 1 100% !important;
+                text-align: center;
+            }
+            img {
+                margin-top: 30px;
+            }
+        }
+  
