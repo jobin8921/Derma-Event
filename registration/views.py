@@ -38,6 +38,7 @@ def register(request):
 
 def sponser_register(request):
     return render(request, 'sponser.html')
+
 def registration_success(request):
     user = request.user
     if user.is_authenticated:
