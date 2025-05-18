@@ -136,8 +136,8 @@
 
     <!-- About Us And Countdown Area Start -->
     <section class="about-us-countdown-area section-padding-100-0" id="about">
-        <section class="about-section">
-            <div style="background: url("{% static 'img/backgrounds/conference-bg.jpg' %}") no-repeat center center / cover; padding: 100px 0; position: relative; font-family: Arial, sans-serif; color: white;">
+    <section class="about-section">
+        <div style="background: url('{% static 'img/derma_img/derma1.webp' %}') no-repeat center center / cover; padding: 100px 0; position: relative; font-family: Arial, sans-serif; color: white;">
     <div style="background: rgba(0, 0, 0, 0.6); position: absolute; top: 0; right: 0; bottom: 0; left: 0;"></div>
     <div style="position: relative; max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; padding: 0 20px; gap: 40px;">
         <!-- Text Content -->
@@ -155,30 +155,19 @@
             <a href="#" style="display: inline-block; margin-top: 30px; padding: 12px 30px; background-color: #f0a500; color: black; border-radius: 30px; font-weight: bold; text-decoration: none; transition: background 0.3s ease;">Interested <span style="margin-left: 5px;">→</span></a>
         </div>
         <!-- Image -->
-        <div style="flex: 1 1 500px; animation: fadeIn 1.5s ease forwards;">
-            <img src="{% static 'img/png-images/dermmaeventpng.png' %}" alt="CHARMAM Conference" style="width: 100%; max-width: 600px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-        </div>
+            <div style="flex: 1 1 500px; animation: fadeIn 1.5s ease forwards; perspective: 1000px;">
+                <div style="width: 100%; max-width: 600px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: transform 0.3s ease; transform-style: preserve-3d;"
+                    onmousemove="handle3D(event, this)"
+                    onmouseleave="reset3D(this)">
+                    <img src="{% static 'img/png-images/derma_logo_m1.png' %}" 
+                        alt="CHARMAM Conference" 
+                        style="width: 100%; border-radius: 20px; display: block;">
+                </div>
+            </div>
     </div>
 
     <!-- Inline Animation -->
-    <style>
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
 
-        @media (max-width: 768px) {
-            h3 { font-size: 28px !important; }
-            p { font-size: 15px !important; }
-            div[style*="flex: 1 1 500px;"] {
-                flex: 1 1 100% !important;
-                text-align: center;
-            }
-            img {
-                margin-top: 30px;
-            }
-        }
-    </style>
 </div>
 
         </section>
