@@ -135,50 +135,705 @@
     <!-- Welcome Area End -->
 
     <!-- About Us And Countdown Area Start -->
-    <section class="about-us-countdown-area section-padding-100-0" id="about">
-    <section class="about-section">
-        <div style="background: url('{% static '' %}') no-repeat center center / cover; padding: 100px 0; position: relative; font-family: Arial, sans-serif; color: white;">
-    <!-- <div style="background: rgba(0, 0, 0, 0.6); position: absolute; top: 0; right: 0; bottom: 0; left: 0;"></div> -->
-    <div style="position: relative; max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; padding: 0 20px; gap: 40px;">
-        <!-- Text Content -->
-        <div style="flex: 1 1 500px; animation: fadeIn 1.2s ease forwards;">
-            <h6 style="color: #f0a500; font-size: 16px; margin-bottom: 10px; text-transform: uppercase;">About Conference</h6>
-            <h3 style="color: #1851ae; font-size: 36px; margin-bottom: 20px;">Welcome to CHARMAM'25</h3>
-            <p style="line-height: 1.8; color: #e0e0e0; font-size: 16px;">
-                <strong>Highlights of the Conclave</strong><br><br>
-                • <strong>Celebrity Participation:</strong> Engage with top influencers from the film and fashion industries promoting skin health awareness.<br>
-                • <strong>Free Dermatology Clinics:</strong> Personalized consultations and expert advice.<br>
-                • <strong>Workshops & Demonstrations:</strong> Interactive sessions on skincare and cosmetic advancements.<br>
-                • <strong>Natural Skincare Exhibits:</strong> Explore organic, dermatologist-approved products.<br>
-                • <strong>Networking Opportunities:</strong> Connect with professionals and wellness enthusiasts.
-            </p>
-            <a href="#" style="display: inline-block; margin-top: 30px; padding: 12px 30px; background-color: #f0a500; color: black; border-radius: 30px; font-weight: bold; text-decoration: none; transition: background 0.3s ease;">Interested <span style="margin-left: 5px;">→</span></a>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+    
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        
+        body {
+          font-family: 'Montserrat', sans-serif;
+          color: #333;
+          background-color: #fcf9f7;
+          overflow-x: hidden;
+        }
+        
+        .about-container {
+          position: relative;
+          min-height: 100vh;
+          width: 100%;
+          background: #fcf9f7;
+          overflow: hidden;
+        }
+        
+        /* 3D Background Elements */
+        .bg-element {
+          position: absolute;
+          border-radius: 50%;
+          filter: blur(80px);
+          opacity: 0.4;
+        }
+        
+        .bg-1 {
+          width: 600px;
+          height: 600px;
+          background: linear-gradient(135deg, #f9d1ca, #f6e3db);
+          top: -100px;
+          left: -100px;
+          animation: float 15s infinite alternate ease-in-out;
+        }
+        
+        .bg-2 {
+          width: 500px;
+          height: 500px;
+          background: linear-gradient(135deg, #d1e2f0, #b6d8f2);
+          bottom: -100px;
+          right: -100px;
+          animation: float 20s infinite alternate-reverse ease-in-out;
+        }
+        
+        .bg-3 {
+          width: 300px;
+          height: 300px;
+          background: linear-gradient(135deg, #fae1dd, #fec89a);
+          top: 50%;
+          right: 10%;
+          animation: float 25s infinite alternate ease-in-out;
+        }
+        
+        @keyframes float {
+          0% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          50% {
+            transform: translate(-30px, 30px) rotate(5deg);
+          }
+          100% {
+            transform: translate(30px, -30px) rotate(-5deg);
+          }
+        }
+        
+        /* 3D Animated Elements */
+        .floating-icon {
+          position: absolute;
+          opacity: 0.8;
+          filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.1));
+          z-index: 2;
+        }
+        
+        .icon-1 {
+          width: 120px;
+          height: 120px;
+          top: 15%;
+          left: 8%;
+          animation: rotate-float 20s infinite linear;
+        }
+        
+        .icon-2 {
+          width: 100px;
+          height: 100px;
+          top: 60%;
+          right: 10%;
+          animation: rotate-float 25s infinite linear reverse;
+        }
+        
+        .icon-3 {
+          width: 80px;
+          height: 80px;
+          bottom: 15%;
+          left: 15%;
+          animation: rotate-float 22s infinite linear;
+        }
+        
+        @keyframes rotate-float {
+          0% {
+            transform: rotate(0deg) translateY(0px);
+          }
+          25% {
+            transform: rotate(90deg) translateY(15px);
+          }
+          50% {
+            transform: rotate(180deg) translateY(0px);
+          }
+          75% {
+            transform: rotate(270deg) translateY(-15px);
+          }
+          100% {
+            transform: rotate(360deg) translateY(0px);
+          }
+        }
+        
+        /* Main Content Styles */
+        .content-wrapper {
+          position: relative;
+          z-index: 5;
+          max-width: 1200px;
+          width: 100%;
+          margin: 0 auto;
+          padding: 60px 30px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 60px;
+          align-items: center;
+        }
+        
+        .info-section {
+          position: relative;
+        }
+        
+        .badge {
+          display: inline-block;
+          padding: 8px 16px;
+          background: linear-gradient(135deg, #ffb3a0, #ff8c8c);
+          color: white;
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: 1.5px;
+          text-transform: uppercase;
+          border-radius: 30px;
+          margin-bottom: 20px;
+          box-shadow: 0 5px 15px rgba(255, 140, 140, 0.3);
+        }
+        
+        .main-title {
+          font-family: 'Playfair Display', serif;
+          font-size: 3.5rem;
+          font-weight: 700;
+          line-height: 1.2;
+          margin-bottom: 30px;
+          background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          position: relative;
+        }
+        
+        .main-title::after {
+          content: '';
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          width: 100px;
+          height: 5px;
+          background: linear-gradient(90deg, #ffb3a0, #ff8c8c);
+          border-radius: 10px;
+        }
+        
+        .description {
+          font-size: 1.1rem;
+          line-height: 1.7;
+          color: #666;
+          margin-bottom: 40px;
+        }
+        
+        .features-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 25px;
+        }
+        
+        .feature-item {
+          position: relative;
+          padding-left: 30px;
+          margin-bottom: 15px;
+        }
+        
+        .feature-item::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 5px;
+          width: 20px;
+          height: 20px;
+          background: linear-gradient(135deg, #ffb3a0, #ff8c8c);
+          border-radius: 50%;
+        }
+        
+        .feature-title {
+          font-weight: 600;
+          font-size: 1.1rem;
+          margin-bottom: 5px;
+          color: #333;
+        }
+        
+        .feature-desc {
+          font-size: 0.9rem;
+          color: #666;
+          line-height: 1.5;
+        }
+        
+        .cta-button {
+          display: inline-block;
+          padding: 15px 35px;
+          background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+          color: white;
+          text-decoration: none;
+          font-weight: 600;
+          border-radius: 50px;
+          margin-top: 40px;
+          box-shadow: 0 10px 20px rgba(26, 42, 108, 0.3);
+          transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+          z-index: 1;
+        }
+        
+        .cta-button::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(135deg, #b21f1f, #fdbb2d);
+          transition: all 0.4s ease;
+          z-index: -1;
+        }
+        
+        .cta-button:hover::before {
+          left: 0;
+        }
+        
+        .cta-button:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 15px 25px rgba(26, 42, 108, 0.4);
+        }
+        
+        /* 3D Display Section */
+        .display-section {
+          position: relative;
+          height: 600px;
+          perspective: 1000px;
+        }
+        
+        .rotating-cube {
+          position: absolute;
+          width: 300px;
+          height: 300px;
+          top: 50%;
+          left: 50%;
+          transform-style: preserve-3d;
+          transform: translate(-50%, -50%) rotateX(-15deg) rotateY(15deg);
+          animation: rotate-cube 20s infinite linear;
+        }
+        
+        @keyframes rotate-cube {
+          0% {
+            transform: translate(-50%, -50%) rotateX(-15deg) rotateY(0deg);
+          }
+          100% {
+            transform: translate(-50%, -50%) rotateX(-15deg) rotateY(360deg);
+          }
+        }
+        
+        .cube-face {
+          position: absolute;
+          width: 300px;
+          height: 300px;
+          background: rgba(255, 255, 255, 0.8);
+          border: 2px solid rgba(255, 255, 255, 0.9);
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(10px);
+        }
+        
+        .front {
+          transform: translateZ(150px);
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(249, 209, 202, 0.9));
+        }
+        
+        .back {
+          transform: translateZ(-150px) rotateY(180deg);
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(209, 226, 240, 0.9));
+        }
+        
+        .right {
+          transform: translateX(150px) rotateY(90deg);
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(250, 225, 221, 0.9));
+        }
+        
+        .left {
+          transform: translateX(-150px) rotateY(-90deg);
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(182, 216, 242, 0.9));
+        }
+        
+        .top {
+          transform: translateY(-150px) rotateX(90deg);
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(254, 200, 154, 0.9));
+        }
+        
+        .bottom {
+          transform: translateY(150px) rotateX(-90deg);
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 140, 140, 0.9));
+        }
+        
+        .face-icon {
+          width: 80px;
+          height: 80px;
+          margin-bottom: 20px;
+        }
+        
+        .face-title {
+          font-family: 'Playfair Display', serif;
+          font-size: 1.5rem;
+          font-weight: 600;
+          margin-bottom: 10px;
+          text-align: center;
+          color: #333;
+        }
+        
+        .face-text {
+          font-size: 0.9rem;
+          text-align: center;
+          color: #666;
+          line-height: 1.4;
+        }
+        
+        /* Countdown Section */
+        .countdown-section {
+          position: relative;
+          z-index: 5;
+          background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+          padding: 40px 0;
+          width: 100%;
+        }
+        
+        .countdown-wrapper {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 30px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        
+        .countdown-title {
+          font-family: 'Playfair Display', serif;
+          font-size: 1.8rem;
+          color: white;
+          margin-bottom: 30px;
+          opacity: 0;
+          animation: fade-in 1s forwards 0.5s;
+        }
+        
+        .countdown-display {
+          display: flex;
+          justify-content: center;
+          gap: 30px;
+          flex-wrap: wrap;
+        }
+        
+        .time-unit {
+          position: relative;
+          width: 120px;
+          perspective: 1000px;
+          opacity: 0;
+          animation: fade-in 1s forwards 1s;
+        }
+        
+        @keyframes fade-in {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .time-card {
+          width: 100%;
+          height: 120px;
+          position: relative;
+          transform-style: preserve-3d;
+          transition: transform 0.6s;
+        }
+        
+        .time-card-front, .time-card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border-radius: 10px;
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .time-card-front {
+          background: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(5px);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .time-card-back {
+          background: rgba(255, 255, 255, 0.15);
+          backdrop-filter: blur(5px);
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          transform: rotateX(180deg);
+        }
+        
+        .time-number {
+          font-size: 3rem;
+          font-weight: 700;
+          color: white;
+        }
+        
+        .time-text {
+          font-size: 0.9rem;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          color: rgba(255, 255, 255, 0.7);
+          margin-top: 5px;
+        }
+        
+        @media (max-width: 1024px) {
+          .content-wrapper {
+            grid-template-columns: 1fr;
+            padding: 40px 20px;
+            gap: 40px;
+          }
+          
+          .display-section {
+            height: 400px;
+            order: -1;
+          }
+          
+          .rotating-cube {
+            width: 250px;
+            height: 250px;
+          }
+          
+          .cube-face {
+            width: 250px;
+            height: 250px;
+          }
+          
+          .front { transform: translateZ(125px); }
+          .back { transform: translateZ(-125px) rotateY(180deg); }
+          .right { transform: translateX(125px) rotateY(90deg); }
+          .left { transform: translateX(-125px) rotateY(-90deg); }
+          .top { transform: translateY(-125px) rotateX(90deg); }
+          .bottom { transform: translateY(125px) rotateX(-90deg); }
+        }
+        
+        @media (max-width: 768px) {
+          .main-title {
+            font-size: 2.5rem;
+          }
+          
+          .features-grid {
+            grid-template-columns: 1fr;
+          }
+          
+          .time-unit {
+            width: 100px;
+          }
+          
+          .time-card {
+            height: 100px;
+          }
+          
+          .time-number {
+            font-size: 2.5rem;
+          }
+        }
+
+    </style>
+
+
+<div class="about-container">
+    <!-- 3D Background Elements -->
+    <div class="bg-element bg-1"></div>
+    <div class="bg-element bg-2"></div>
+    <div class="bg-element bg-3"></div>
+    
+    <!-- 3D Floating Icons -->
+    <svg class="floating-icon icon-1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="45" fill="white" stroke="#ffb3a0" stroke-width="3"/>
+      <path d="M30,65 C30,45 70,45 70,65 L70,80 L30,80 Z" fill="#f9d1ca" stroke="#ffb3a0" stroke-width="2"/>
+      <circle cx="50" cy="35" r="15" fill="#f9d1ca" stroke="#ffb3a0" stroke-width="2"/>
+    </svg>
+    
+    <svg class="floating-icon icon-2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect x="20" y="20" width="60" height="60" rx="10" fill="white" stroke="#b6d8f2" stroke-width="3"/>
+      <rect x="30" y="30" width="40" height="40" rx="5" fill="#d1e2f0" stroke="#b6d8f2" stroke-width="2"/>
+      <circle cx="50" cy="50" r="10" fill="#b6d8f2"/>
+    </svg>
+    
+    <svg class="floating-icon icon-3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,10 90,35 90,75 50,100 10,75 10,35" fill="white" stroke="#fec89a" stroke-width="3"/>
+      <polygon points="50,30 75,45 75,70 50,85 25,70 25,45" fill="#fae1dd" stroke="#fec89a" stroke-width="2"/>
+    </svg>
+    
+    <!-- Main Content -->
+    <div class="content-wrapper">
+      <div class="info-section">
+        <div class="badge">ABOUT THE CONCLAVE</div>
+        <h1 class="main-title">CHARMAM 25</h1>
+        <p class="description">Join the world's most prestigious gathering of skincare innovators, dermatologists, and beauty experts. CHARMAM brings together cutting-edge science and luxury aesthetics in a transformative 3-day experience dedicated to the future of skin wellness.</p>
+        
+        <div class="features-grid">
+          <div class="feature-item">
+            <h3 class="feature-title">Expert Masterclasses</h3>
+            <p class="feature-desc">Learn techniques and insights from celebrated dermatologists and beauty innovators.</p>
+          </div>
+          
+          <div class="feature-item">
+            <h3 class="feature-title">Innovation Showcase</h3>
+            <p class="feature-desc">Discover breakthrough formulations and technologies from leading brands worldwide.</p>
+          </div>
+          
+          <div class="feature-item">
+            <h3 class="feature-title">One-on-One Consultations</h3>
+            <p class="feature-desc">Personalized skin analysis with world-class dermatology experts.</p>
+          </div>
+          
+          <div class="feature-item">
+            <h3 class="feature-title">Global Networking</h3>
+            <p class="feature-desc">Connect with industry leaders and form valuable partnerships.</p>
+          </div>
         </div>
-        <!-- Image -->
-            <div style="flex: 1 1 500px; animation: fadeIn 1.5s ease forwards; perspective: 1000px;">
-                <div style="width: 100%; max-width: 600px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: transform 0.3s ease; transform-style: preserve-3d;"
-                    onmousemove="handle3D(event, this)"
-                    onmouseleave="reset3D(this)">
-                    <img src="{% static 'img/png-images/derma_logo_m1.png' %}" 
-                        alt="CHARMAM Conference" 
-                        style="width: 100%; border-radius: 20px; display: block;">
-                </div>
-            </div>
+      </div>
+      
+      <div class="display-section">
+        <div class="rotating-cube">
+          <div class="cube-face front">
+            <svg class="face-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="40" r="30" fill="#ffb3a0" stroke="#ff8c8c" stroke-width="2"/>
+              <path d="M20,70 C20,40 80,40 80,70 C80,90 20,90 20,70 Z" fill="#ffb3a0" stroke="#ff8c8c" stroke-width="2"/>
+            </svg>
+            <img src="{% static 'img\png-images\derma_logo_m1.png' %}" alt="Descriptive Alt Text" class="face-image"/>
+          </div>
+          
+          <div class="cube-face back">
+            <svg class="face-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <rect x="20" y="20" width="60" height="60" rx="10" fill="#b6d8f2" stroke="#1a2a6c" stroke-width="2"/>
+              <circle cx="50" cy="50" r="20" fill="#1a2a6c"/>
+            </svg>
+            <img src="{% static 'img\png-images\derma_logo_m1.png' %}" alt="Descriptive Alt Text" class="face-image"/>
+          </div>
+          
+          <div class="cube-face right">
+            <svg class="face-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <path d="M50,10 C70,10 90,30 90,50 C90,70 70,90 50,90 C30,90 10,70 10,50 C10,30 30,10 50,10 Z" fill="#fae1dd" stroke="#fec89a" stroke-width="2"/>
+              <path d="M40,40 L60,40 L60,70 C60,80 40,80 40,70 Z" fill="#fec89a" stroke="#fec89a" stroke-width="1"/>
+              <circle cx="50" cy="30" r="5" fill="#fec89a"/>
+            </svg>
+            <img src="{% static 'img\png-images\derma_logo_m1.png' %}" alt="Descriptive Alt Text" class="face-image"/>
+          </div>
+          
+          <div class="cube-face left">
+            <svg class="face-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="50,10 90,35 90,75 50,100 10,75 10,35" fill="#d1e2f0" stroke="#b6d8f2" stroke-width="2"/>
+              <circle cx="50" cy="50" r="15" fill="#b6d8f2"/>
+            </svg>
+            <img src="{% static 'img\png-images\derma_logo_m1.png' %}" alt="Descriptive Alt Text" class="face-image"/>
+          </div>
+          
+          <div class="cube-face top">
+            <svg class="face-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <rect x="25" y="25" width="50" height="50" rx="25" fill="#fec89a" stroke="#fdbb2d" stroke-width="2"/>
+              <circle cx="50" cy="50" r="15" fill="#fdbb2d"/>
+            </svg>
+            <img src="{% static 'img\png-images\derma_logo_m1.png' %}" alt="Descriptive Alt Text" class="face-image"/>
+          </div>
+          
+          <div class="cube-face bottom">
+            <svg class="face-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30,30 L70,30 L70,70 L30,70 Z" fill="#ff8c8c" stroke="#b21f1f" stroke-width="2" transform="rotate(45, 50, 50)"/>
+              <circle cx="50" cy="50" r="15" fill="#b21f1f"/>
+            </svg>
+            <img src="{% static 'img\png-images\derma_logo_m1.png' %}" alt="Descriptive Alt Text" class="face-image"/>
+          </div>
+        </div>
+      </div>
     </div>
+    
+    <!-- Countdown Section -->
+    <div class="countdown-section">
+      <div class="countdown-wrapper">
+        <h2 class="countdown-title">Join Us in 2025</h2>
+        
+        <div class="countdown-display">
+          <div class="time-unit" style="animation-delay: 0.2s;">
+            <div class="time-card">
+              <div class="time-card-front">
+                <div class="time-number" id="months">00</div>
+                <div class="time-text">Months</div>
+              </div>
+              <div class="time-card-back">
+                <div class="time-number" id="months-back">00</div>
+                <div class="time-text">Months</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="time-unit" style="animation-delay: 0.4s;">
+            <div class="time-card">
+              <div class="time-card-front">
+                <div class="time-number" id="days">00</div>
+                <div class="time-text">Days</div>
+              </div>
+              <div class="time-card-back">
+                <div class="time-number" id="days-back">00</div>
+                <div class="time-text">Days</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="time-unit" style="animation-delay: 0.6s;">
+            <div class="time-card">
+              <div class="time-card-front">
+                <div class="time-number" id="hours">00</div>
+                <div class="time-text">Hours</div>
+              </div>
+              <div class="time-card-back">
+                <div class="time-number" id="hours-back">00</div>
+                <div class="time-text">Hours</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="time-unit" style="animation-delay: 0.8s;">
+            <div class="time-card">
+              <div class="time-card-front">
+                <div class="time-number" id="minutes">00</div>
+                <div class="time-text">Minutes</div>
+              </div>
+              <div class="time-card-back">
+                <div class="time-number" id="minutes-back">00</div>
+                <div class="time-text">Minutes</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="time-unit" style="animation-delay: 1s;">
+            <div class="time-card">
+              <div class="time-card-front">
+                <div class="time-number" id="seconds">00</div>
+                <div class="time-text">Seconds</div>
+              </div>
+              <div class="time-card-back">
+                <div class="time-number" id="seconds-back">00</div>
+                <div class="time-text">Seconds</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Inline Animation -->
+    
 
-</div>
 
-        </section>
+
+
 
         <!-- Counter Up Area -->
-        <div class="countdown-up-area">
+        <!-- <div class="countdown-up-area">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-12 col-md-3">
-                        <!-- Countdown Text -->
-                        <div class="countdown-content-text mb-100 wow fadeInUp" data-wow-delay="300ms">
+                        <-- Countdown Text -->
+                        <!-- <div class="countdown-content-text mb-100 wow fadeInUp" data-wow-delay="300ms">
                             <h6>Conference Date</h6>
                             <h4>Count Every Second Until the Event</h4>
                         </div>
@@ -192,7 +847,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- About Us And Countdown Area End -->
 
     <!-- Our Speakings Area Start -->
