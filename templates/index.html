@@ -852,92 +852,432 @@
     <!-- About Us And Countdown Area End -->
 
     <!-- Our Speakings Area Start -->
-    <section class="our-speaker-area bg-img bg-gradient-overlay section-padding-100-60" style="background-image: url('{% static 'img/bg-img/3.jpg' %}');">
+      <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #fae1dd, #fec89a);
+
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .speakers-section {
+            position: relative;
+            padding: 80px 20px;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #fcf9f7, #fec89a);
+
+        }
+
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .floating-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-circle:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-circle:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            top: 20%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .floating-circle:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            bottom: 30%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);;
+            /* background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); */
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            transform: perspective(1000px) rotateX(15deg);
+            animation: titleGlow 3s ease-in-out infinite alternate;
+        }
+
+        /* @keyframes titleGlow {
+            0% { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.3); }
+            100% { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 30px rgba(255, 255, 255, 0.5); }
+        } */
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: rgba(30, 24, 24, 0.9);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .speakers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .speaker-card {
+            background: rgba(239, 12, 12, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        .speaker-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s;
+            opacity: 0;
+        }
+
+        .speaker-card:hover::before {
+            animation: shimmer 1.5s ease-in-out;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); opacity: 0; }
+        }
+
+        .speaker-card:hover {
+            transform: perspective(1000px) rotateY(5deg) translateY(-10px);
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.2),
+                0 0 40px rgba(255, 255, 255, 0.1);
+        }
+
+        .speaker-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #666;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .speaker-card:hover .speaker-image {
+            transform: scale(1.1) rotateZ(5deg);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .speaker-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), transparent);
+            border-radius: 50%;
+        }
+
+        .speaker-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: rgb(243, 119, 119);
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .speaker-title {
+            font-size: 1rem;
+             color: rgb(243, 119, 119);
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .speakers-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .speaker-card {
+                padding: 25px;
+            }
+        }
+
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            animation: particleFloat 8s linear infinite;
+        }
+
+        @keyframes particleFloat {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) translateX(100px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="speakers-section">
+        <div class="floating-elements">
+            <div class="floating-circle"></div>
+            <div class="floating-circle"></div>
+            <div class="floating-circle"></div>
+        </div>
+        
+        <div class="particles" id="particles"></div>
+
         <div class="container">
-            <div class="row">
-                <!-- Heading -->
-                <div class="col-12">
-                    <div class="section-heading text-center wow fadeInUp" data-wow-delay="300ms">
-                        <p>DELEGATES</p>
-                        <h4>Who’s speaking</h4>
-                    </div>
-                </div>
+            <div class="section-header">
+                <h2 class="section-title">Featured Speakers</h2>
+                <p class="section-subtitle">
+                    Meet our distinguished panel of skincare experts, dermatologists, and industry leaders 
+                    who will share cutting-edge insights and breakthrough innovations at our conclave.
+                </p>
             </div>
-            <div class="row">
-                <!-- Single Speaker Area -->
-          
 
-                <!-- Single Speaker Area -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Thumb -->
-                        <div class="speaker-single-thumb">
-                            <img src="{% static 'img/delegates/dele1.jpg' %}" alt="">
-                        </div>
-                        <!-- Info -->
-                        <div class="speaker-info">
-                            <h5>Muhammad Riyas</h5>
-                            <p> Minister for Public Works Department and Tourism, <br>
-                                Government of Kerala</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Speaker Area -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Thumb -->
-                        <div class="speaker-single-thumb">
-                            <img src="{% static 'img/delegates/dele3.jpg' %}" alt="">
-                        </div>
-                        <!-- Info -->
-                        <div class="speaker-info">
-                            <h5>Veena George</h5>      
-                            <p> Minister for Health and Woman and Child Development, <br>
-                                Government of Kerala</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Thumb -->
-                        <div class="speaker-single-thumb">
-                            <img src="{% static 'img/delegates/dele4.png' %}" alt="">
-                        </div>
-                        <!-- Info -->
-                        <div class="speaker-info">
-                            <h5>Saji Cheriyan</h5>      
-                            <p> Minister for Fisheries, Culture & Youth Affairs, <br>
-                                Government of Kerala</p>
-                        </div>
-                    </div>
-                </div>
-
-                      <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Thumb -->
-                        <div class="speaker-single-thumb">
+            <div class="speakers-grid">
+                <div class="speaker-card">
+                    <div class="speaker-single-thumb">
                             <img src="{% static 'img/delegates/ceo_img.jpg' %}" alt="">
-                        </div>
-                        <!-- Info -->
-                        <div class="speaker-info">
-                            <h5>Abijith TJ</h5>
-                            <p>CEO</p>
-                        </div>
+                    </div><br>
+                    <h3 class="speaker-name">Dr. Sarah Mitchell</h3>
+                    <p class="speaker-title">Dermatologist & Anti-Aging Specialist</p>
+                  
+                </div>
+               
+
+                <div class="speaker-card">
+                    <div class="speaker-image">👨‍🔬</div>
+                    <h3 class="speaker-name">Prof. James Chen</h3>
+                    <p class="speaker-title">Cosmetic Chemistry Pioneer</p>
+                    <p class="speaker-bio">
+                        Renowned cosmetic chemist and founder of innovative skincare formulations, 
+                        with patents in sustainable beauty technology.
+                    </p>
+                    <div class="speaker-specialties">
+                        <span class="specialty-tag">Formulation</span>
+                        <span class="specialty-tag">Green Chemistry</span>
+                        <span class="specialty-tag">Innovation</span>
                     </div>
                 </div>
 
+                <div class="speaker-card">
+                    <div class="speaker-image">👩‍💼</div>
+                    <h3 class="speaker-name">Maria Rodriguez</h3>
+                    <p class="speaker-title">Beauty Industry Executive</p>
+                    <p class="speaker-bio">
+                        Former VP of Global Skincare at leading beauty conglomerate, 
+                        now driving sustainable beauty initiatives worldwide.
+                    </p>
+                    <div class="speaker-specialties">
+                        <span class="specialty-tag">Brand Strategy</span>
+                        <span class="specialty-tag">Sustainability</span>
+                        <span class="specialty-tag">Market Trends</span>
+                    </div>
+                </div>
 
+                <div class="speaker-card">
+                    <div class="speaker-image">👨‍⚕</div>
+                    <h3 class="speaker-name">Dr. Michael Park</h3>
+                    <p class="speaker-title">Aesthetic Medicine Director</p>
+                    <p class="speaker-bio">
+                        Board-certified plastic surgeon specializing in non-invasive aesthetic treatments 
+                        and advanced skincare protocols.
+                    </p>
+                    <div class="speaker-specialties">
+                        <span class="specialty-tag">Aesthetics</span>
+                        <span class="specialty-tag">Non-Invasive</span>
+                        <span class="specialty-tag">Protocols</span>
+                    </div>
+                </div>
 
-                <div class="col-12">
-                    <div class="more-speaker-btn text-center mt-20 mb-40 wow fadeInUp" data-wow-delay="300ms">
-                        <a class="btn confer-btn-white" href="#">view all Speaker <i class="zmdi zmdi-long-arrow-right"></i></a>
+                <div class="speaker-card">
+                    <div class="speaker-image">👩‍🔬</div>
+                    <h3 class="speaker-name">Dr. Lisa Wang</h3>
+                    <p class="speaker-title">Microbiome Research Lead</p>
+                    <p class="speaker-bio">
+                        Pioneering researcher in skin microbiome and its role in skin health, 
+                        developing next-generation probiotic skincare solutions.
+                    </p>
+                    <div class="speaker-specialties">
+                        <span class="specialty-tag">Microbiome</span>
+                        <span class="specialty-tag">Probiotics</span>
+                        <span class="specialty-tag">Research</span>
+                    </div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-image">👨‍💼</div>
+                    <h3 class="speaker-name">David Thompson</h3>
+                    <p class="speaker-title">Digital Beauty Innovator</p>
+                    <p class="speaker-bio">
+                        Tech entrepreneur revolutionizing skincare through AI-powered personalization 
+                        and digital skin analysis platforms.
+                    </p>
+                    <div class="speaker-specialties">
+                        <span class="specialty-tag">AI & Tech</span>
+                        <span class="specialty-tag">Personalization</span>
+                        <span class="specialty-tag">Digital Health</span>
                     </div>
                 </div>
             </div>
+
+        
         </div>
     </section>
+
+    <script>
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 20;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 8 + 's';
+                particle.style.animationDuration = (8 + Math.random() * 4) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Add subtle mouse movement effect
+        document.addEventListener('mousemove', (e) => {
+            const cards = document.querySelectorAll('.speaker-card');
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+
+            cards.forEach((card, index) => {
+                const intensity = (index + 1) * 2;
+                const rotateX = (mouseY - 0.5) * intensity;
+                const rotateY = (mouseX - 0.5) * intensity;
+                
+                if (!card.matches(':hover')) {
+                    card.style.transform = perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg);
+                }
+            });
+        });
+
+        // Initialize particles when page loads
+        document.addEventListener('DOMContentLoaded', createParticles);
+
+        // Add scroll-triggered animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe speaker cards for scroll animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.speaker-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(50px)';
+                card.style.transition = opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s;
+                observer.observe(card);
+            });
+        });
+    </script>
     <!-- Our Speakings Area End -->
 
     <!-- Our Schedule Area Start -->
